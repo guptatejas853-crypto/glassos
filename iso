@@ -1,0 +1,14 @@
+# GlassOS ISO
+
+## Purpose
+Build the GlassOS installation image.
+
+## Contents
+- Boot Files
+- Kernel
+- Drivers
+- Applications
+- Installer
+
+## Status
+Planning

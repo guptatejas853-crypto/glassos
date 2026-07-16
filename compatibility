@@ -1,0 +1,23 @@
+# Glass Compatibility Engine
+
+## Purpose
+Run applications from different platforms.
+
+## Supported Formats
+- .exe
+- .msi
+- .deb
+- .rpm
+- .AppImage
+- .apk (future)
+- .atp (Glass Native)
+
+## Features
+- Automatic App Detection
+- Automatic Key Mapping
+- Instant Handler
+- Compatibility Layer
+- Unsupported App Type Detection
+
+## Status
+Planning

@@ -1,0 +1,3 @@
+# Services
+
+Contains background services and system daemons responsible for networking, updates, security, and other operating system tasks.

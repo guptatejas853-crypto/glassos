@@ -5,17 +5,21 @@
 #include "atp_loader.h"
 #include "elf_loader.h"
 #include "exe_loader.h"
+
+#include "../converter/converter.h"
 #include "../packages/installer.h"
 
 void smart_atp_init(void)
 {
-    printf("[Smart ATP] Engine Initialized.\n");
-
     atp_loader_init();
     elf_loader_init();
     exe_loader_init();
 
+    converter_init();
+
     installer_init();
+
+    printf("[Smart ATP] Engine Initialized.\n");
 }
 
 void smart_atp_process(const char *path)
@@ -28,45 +32,44 @@ void smart_atp_process(const char *path)
         return;
     }
 
-    /* Native ATP */
     if (strcmp(ext, ".atp") == 0)
     {
         atp_load(path);
         install_package(path);
+        return;
     }
 
-    /* ELF */
-    else if (strcmp(ext, ".elf") == 0)
+    if (strcmp(ext, ".elf") == 0)
     {
-        printf("[Smart ATP] ELF Detected.\n");
+        char atp_path[256];
 
-        elf_load(path);
+        if (convert_elf_to_atp(path, atp_path))
+        {
+            install_package(atp_path);
+        }
+        else
+        {
+            elf_load(path);
+        }
 
-        /*
-         * Future:
-         * Convert ELF -> ATP
-         * Then:
-         * install_package(new_atp);
-         */
+        return;
     }
 
-    /* Windows EXE */
-    else if (strcmp(ext, ".exe") == 0)
+    if (strcmp(ext, ".exe") == 0)
     {
-        printf("[Smart ATP] EXE Detected.\n");
+        char atp_path[256];
 
-        exe_load(path);
+        if (convert_exe_to_atp(path, atp_path))
+        {
+            install_package(atp_path);
+        }
+        else
+        {
+            exe_load(path);
+        }
 
-        /*
-         * Future:
-         * Convert EXE -> ATP
-         * Then:
-         * install_package(new_atp);
-         */
+        return;
     }
 
-    else
-    {
-        printf("[Smart ATP] Unsupported file type.\n");
-    }
+    printf("[Smart ATP] Unsupported file type.\n");
 }

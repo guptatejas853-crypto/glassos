@@ -4,22 +4,39 @@
 
 #include "../core/process.h"
 #include "../core/memory.h"
-#include "../core/scheduler.h"
 
 int launch_application(const char *path)
 {
     printf("[Launcher] Launching Application: %s\n", path);
 
-    /* Allocate memory */
-    memory_allocate();
+    /*
+     * Allocate memory for application
+     */
+    void *app_memory = memory_alloc(4096);
 
-    /* Create process */
-    process_create(path);
+    if (app_memory == NULL)
+    {
+        printf("[Launcher] Memory allocation failed.\n");
+        return 0;
+    }
 
-    /* Add process to scheduler */
-    scheduler_add_process(path);
+    /*
+     * Create process
+     */
+    int pid = process_create(path);
 
-    printf("[Launcher] Application Started Successfully.\n");
+    if (pid < 0)
+    {
+        printf("[Launcher] Process creation failed.\n");
+
+        memory_free(app_memory);
+
+        return 0;
+    }
+
+    printf("[Launcher] Process Created. PID: %d\n", pid);
+
+    printf("[Launcher] Application Started.\n");
 
     return 1;
 }

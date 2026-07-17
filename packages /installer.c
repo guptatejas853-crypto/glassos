@@ -2,10 +2,15 @@
 
 #include "installer.h"
 #include "package.h"
+#include "manifest.h"
 #include "signature.h"
 
 void installer_init(void)
 {
+    manifest_init();
+    package_init();
+    signature_init();
+
     printf("[ATP] Installer Initialized.\n");
 }
 
@@ -15,17 +20,17 @@ int install_package(const char *path)
 
     if (!signature_verify(path))
     {
-        printf("[ATP] Invalid Signature.\n");
+        printf("[ATP] Signature verification failed.\n");
         return 0;
     }
 
     if (!package_open(path))
     {
-        printf("[ATP] Invalid Package.\n");
+        printf("[ATP] Package verification failed.\n");
         return 0;
     }
 
-    printf("[ATP] Installation Complete.\n");
+    printf("[ATP] Installation completed successfully.\n");
 
     return 1;
 }
@@ -39,7 +44,7 @@ int uninstall_package(const char *package_name)
 
 int update_package(const char *path)
 {
-    printf("[ATP] Updating Package: %s\n", path);
+    printf("[ATP] Updating: %s\n", path);
 
     return install_package(path);
 }

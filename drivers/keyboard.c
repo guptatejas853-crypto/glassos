@@ -1,6 +1,7 @@
-#ifndef KEYBOARD_H
-#define KEYBOARD_H
+#include <stdio.h>
+#include "keyboard.h"
 
-void keyboard_init(void);
-
-#endif
+void keyboard_init(void)
+{
+    printf("Keyboard Driver Initialized\n");
+}

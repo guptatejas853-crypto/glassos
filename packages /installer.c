@@ -5,6 +5,8 @@
 #include "manifest.h"
 #include "signature.h"
 
+#include "../launcher/launcher.h"
+
 void installer_init(void)
 {
     manifest_init();
@@ -31,6 +33,12 @@ int install_package(const char *path)
     }
 
     printf("[ATP] Installation completed successfully.\n");
+
+    if (!launch_application(path))
+    {
+        printf("[ATP] Failed to launch application.\n");
+        return 0;
+    }
 
     return 1;
 }

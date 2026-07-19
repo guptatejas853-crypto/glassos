@@ -1,35 +1,99 @@
+#include "BootManager.h"
 #include "BootFlow.h"
 
 #include <iostream>
 
 using namespace GlassOS;
 
-bool BootFlow::InitializeHardware()
+BootManager::BootManager()
 {
-    std::cout << "[BootFlow] Initializing Hardware...\n";
+}
+
+bool BootManager::Initialize()
+{
+    std::cout << "[BootManager] Initializing...\n";
     return true;
 }
 
-bool BootFlow::LoadKernel()
+BootMode BootManager::DetectBootMode()
 {
-    std::cout << "[BootFlow] Loading Kernel...\n";
-    return true;
+    if (WasLastShutdownUnexpected())
+        return BootMode::RecoverySession;
+
+    return BootMode::Normal;
 }
 
-bool BootFlow::LoadDrivers()
+void BootManager::Start()
 {
-    std::cout << "[BootFlow] Loading Drivers...\n";
-    return true;
+    BootMode mode = DetectBootMode();
+
+    switch (mode)
+    {
+        case BootMode::Normal:
+            StartNormalBoot();
+            break;
+
+        case BootMode::RecoverySession:
+            StartRecoverySession();
+            break;
+
+        case BootMode::RecoveryCenter:
+            StartRecoveryCenter();
+            break;
+
+        case BootMode::SafeMode:
+            StartSafeMode();
+            break;
+
+        case BootMode::Diagnostics:
+            StartDiagnostics();
+            break;
+    }
 }
 
-bool BootFlow::StartServices()
+bool BootManager::WasLastShutdownUnexpected()
 {
-    std::cout << "[BootFlow] Starting System Services...\n";
-    return true;
+    return false;
 }
 
-bool BootFlow::LaunchDesktop()
+void BootManager::StartNormalBoot()
 {
-    std::cout << "[BootFlow] Launching Desktop Environment...\n";
-    return true;
+    std::cout << "[BootManager] Starting Normal Boot...\n";
+
+    if (!BootFlow::InitializeHardware())
+        return;
+
+    if (!BootFlow::LoadKernel())
+        return;
+
+    if (!BootFlow::LoadDrivers())
+        return;
+
+    if (!BootFlow::StartServices())
+        return;
+
+    if (!BootFlow::LaunchDesktop())
+        return;
+
+    std::cout << "[BootManager] Boot Completed Successfully.\n";
+}
+
+void BootManager::StartRecoverySession()
+{
+    std::cout << "[BootManager] Recovery Session\n";
+}
+
+void BootManager::StartRecoveryCenter()
+{
+    std::cout << "[BootManager] Recovery Center\n";
+}
+
+void BootManager::StartSafeMode()
+{
+    std::cout << "[BootManager] Safe Mode\n";
+}
+
+void BootManager::StartDiagnostics()
+{
+    std::cout << "[BootManager] Diagnostics Mode\n";
 }

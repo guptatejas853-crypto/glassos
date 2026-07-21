@@ -20,39 +20,32 @@ bool DriverManager::ScanDrivers()
 {
     drivers.clear();
 
-    drivers.push_back(
-    {
-        "Graphics Driver",
-        "1.0",
-        "Installed"
-    });
+    /*
+        TODO:
+        Replace this placeholder implementation with
+        real hardware driver detection.
+
+        Future implementation should enumerate:
+
+        - Graphics Driver
+        - Audio Driver
+        - Network Driver
+        - Bluetooth Driver
+        - USB Driver
+        - Storage Driver
+        - Camera Driver
+        - Chipset Driver
+        - Display Driver
+
+        Detection should use the GlassOS HAL or the
+        underlying operating system APIs.
+    */
 
     drivers.push_back(
     {
-        "Audio Driver",
-        "1.0",
-        "Installed"
-    });
-
-    drivers.push_back(
-    {
-        "Network Driver",
-        "1.0",
-        "Installed"
-    });
-
-    drivers.push_back(
-    {
-        "USB Driver",
-        "1.0",
-        "Installed"
-    });
-
-    drivers.push_back(
-    {
-        "System Driver",
-        "1.0",
-        "Installed"
+        "Unknown Driver",
+        "Unknown",
+        "Detected"
     });
 
     return true;

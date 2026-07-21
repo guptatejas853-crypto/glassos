@@ -36,10 +36,11 @@ bool GPUManager::Initialize()
         - Integrated + Dedicated
     */
 
-    gpuType = "Integrated";
+    // TODO:
+// Detect GPU from GlassOS HAL / operating system.
 
-    gpuName =
-        "Generic Graphics";
+gpuType = "Unknown";
+gpuName = "Unknown GPU";
 
 
     renderingMode =

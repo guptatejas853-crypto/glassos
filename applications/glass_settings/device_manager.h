@@ -5,16 +5,12 @@
 
 namespace GlassOS
 {
-    
 #include "core/hardware/hardware_types.h"
 
-class DriverManager
+class DeviceManager
 {
     ...
 };
-
-    class DeviceManager
-    {
     public:
         static bool Initialize();
 

@@ -1,4 +1,5 @@
 #include "command_suggester.h"
+#include "command_registry.h"
 
 #include <algorithm>
 #include <unordered_map>
@@ -15,12 +16,6 @@ static std::unordered_map<
 bool CommandSuggester::Initialize()
 {
     commands.clear();
-
-    commands.push_back("/verify");
-    commands.push_back("/repair");
-    commands.push_back("/scan");
-    commands.push_back("/update");
-    commands.push_back("/help");
 
     return true;
 }
@@ -46,15 +41,16 @@ CommandSuggester::Suggest(
         return result;
     }
 
-    for(const auto& item : commands)
+    std::vector<std::string> registered =
+        CommandRegistry::GetAllCommands();
+
+    for(const auto& item : registered)
     {
         if(EditDistance(command,item)<=3)
             result.push_back(item);
     }
 
-    std::sort(
-        result.begin(),
-        result.end());
+    std::sort(result.begin(),result.end());
 
     return result;
 }

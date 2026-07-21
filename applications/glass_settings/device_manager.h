@@ -5,12 +5,13 @@
 
 namespace GlassOS
 {
-    struct DeviceInfo
-    {
-        std::string name;
-        std::string type;
-        std::string status;
-    };
+    
+#include "core/hardware/hardware_types.h"
+
+class DriverManager
+{
+    ...
+};
 
     class DeviceManager
     {

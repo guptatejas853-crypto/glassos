@@ -1,4 +1,5 @@
 #include "command_terminal.h"
+#include "command_registry.h"
 
 #include <iostream>
 
@@ -6,6 +7,26 @@ using namespace GlassOS;
 
 bool CommandTerminal::Initialize()
 {
+    CommandRegistry::RegisterSystemCommand(
+        "/verify",
+        VerifySystem);
+
+    CommandRegistry::RegisterSystemCommand(
+        "/repair",
+        RepairSystem);
+
+    CommandRegistry::RegisterSystemCommand(
+        "/scan",
+        ScanSystem);
+
+    CommandRegistry::RegisterSystemCommand(
+        "/update",
+        UpdateSystem);
+
+    CommandRegistry::RegisterSystemCommand(
+        "/help",
+        ShowHelp);
+
     return true;
 }
 
@@ -23,20 +44,8 @@ bool CommandTerminal::Stop()
 
 bool CommandTerminal::Execute(const std::string& command)
 {
-    if (command == "/verify")
-        return VerifySystem();
-
-    if (command == "/repair")
-        return RepairSystem();
-
-    if (command == "/scan")
-        return ScanSystem();
-
-    if (command == "/update")
-        return UpdateSystem();
-
-    if (command == "/help")
-        return ShowHelp();
+    if(CommandRegistry::Execute(command))
+        return true;
 
     return UnknownCommand(command);
 }
@@ -80,7 +89,8 @@ bool CommandTerminal::ShowHelp()
     return true;
 }
 
-bool CommandTerminal::UnknownCommand(const std::string& command)
+bool CommandTerminal::UnknownCommand(
+    const std::string& command)
 {
     std::cout
         << "Unknown command: "
@@ -88,7 +98,7 @@ bool CommandTerminal::UnknownCommand(const std::string& command)
         << std::endl;
 
     std::cout
-        << "Type /help to view available commands."
+        << "Searching for similar commands..."
         << std::endl;
 
     return false;

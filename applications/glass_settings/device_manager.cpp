@@ -20,53 +20,36 @@ bool DeviceManager::ScanDevices()
 {
     devices.clear();
 
-    devices.push_back(
-    {
-        "Graphics Adapter",
-        "GPU",
-        "Enabled"
-    });
+    /*
+        TODO:
+        Replace this placeholder implementation with
+        real hardware enumeration.
+
+        Future implementation should detect:
+
+        - Graphics Adapter
+        - Audio Device
+        - Network Adapter
+        - Bluetooth Adapter
+        - USB Controllers
+        - Camera
+        - Touchpad
+        - Keyboard
+        - Mouse
+        - Battery
+        - Storage Devices
+        - Monitors
+
+        Detection should be performed through the
+        GlassOS Hardware Abstraction Layer (HAL)
+        or the underlying operating system APIs.
+    */
 
     devices.push_back(
     {
-        "Audio Device",
-        "Audio",
-        "Enabled"
-    });
-
-    devices.push_back(
-    {
-        "Wi-Fi Adapter",
-        "Network",
-        "Enabled"
-    });
-
-    devices.push_back(
-    {
-        "Bluetooth Adapter",
-        "Bluetooth",
-        "Enabled"
-    });
-
-    devices.push_back(
-    {
-        "USB Controller",
-        "USB",
-        "Enabled"
-    });
-
-    devices.push_back(
-    {
-        "Touchpad",
-        "Input",
-        "Enabled"
-    });
-
-    devices.push_back(
-    {
-        "Camera",
-        "Camera",
-        "Enabled"
+        "Unknown Device",
+        "Unknown",
+        "Detected"
     });
 
     return true;

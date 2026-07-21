@@ -5,14 +5,13 @@
 
 namespace GlassOS
 {
-    struct DriverInfo
-    {
-        std::string name;
-        std::string version;
-        std::string status;
-    };
+    
+#include "core/hardware/hardware_types.h"
 
-    class DriverManager
+class DriverManager
+{
+    ...
+};
     {
     public:
         static bool Initialize();

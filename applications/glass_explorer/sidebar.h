@@ -1,20 +1,27 @@
 #pragma once
 
 #include <string>
-#include <vector>
 
 namespace GlassOS
 {
     class Sidebar
     {
     public:
+
         static bool Initialize();
 
-        static bool LoadDefaultItems();
+        static void OpenHome();
 
-        static const std::vector<std::string>& GetItems();
+        static void OpenDesktop();
+
+        static void OpenDocuments();
+
+        static void OpenDownloads();
+
+        static std::string CurrentLocation();
 
     private:
-        static std::vector<std::string> items;
+
+        static std::string currentLocation;
     };
 }

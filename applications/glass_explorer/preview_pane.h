@@ -7,16 +7,18 @@ namespace GlassOS
     class PreviewPane
     {
     public:
+
         static bool Initialize();
 
-        static bool ShowPreview(
-            const std::string& filePath);
-
-        static bool Clear();
+        static void ShowFile(
+            const std::string& path);
 
         static std::string CurrentFile();
 
+        static void Clear();
+
     private:
+
         static std::string currentFile;
     };
 }

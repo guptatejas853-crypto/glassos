@@ -2,36 +2,36 @@
 
 using namespace GlassOS;
 
-std::vector<std::string> Sidebar::items;
+std::string Sidebar::currentLocation = "/";
 
 bool Sidebar::Initialize()
 {
-    return LoadDefaultItems();
-}
-
-bool Sidebar::LoadDefaultItems()
-{
-    items.clear();
-
-    items.push_back("Home");
-    items.push_back("Favorites");
-    items.push_back("This PC");
-
-    items.push_back("Documents");
-    items.push_back("Downloads");
-    items.push_back("Desktop");
-
-    items.push_back("Pictures");
-    items.push_back("Music");
-    items.push_back("Videos");
-
-    items.push_back("Recycle Bin");
+    currentLocation = "/";
 
     return true;
 }
 
-const std::vector<std::string>&
-Sidebar::GetItems()
+void Sidebar::OpenHome()
 {
-    return items;
+    currentLocation = "Home";
+}
+
+void Sidebar::OpenDesktop()
+{
+    currentLocation = "Desktop";
+}
+
+void Sidebar::OpenDocuments()
+{
+    currentLocation = "Documents";
+}
+
+void Sidebar::OpenDownloads()
+{
+    currentLocation = "Downloads";
+}
+
+std::string Sidebar::CurrentLocation()
+{
+    return currentLocation;
 }

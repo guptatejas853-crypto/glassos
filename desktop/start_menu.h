@@ -5,27 +5,15 @@ namespace GlassOS
     class StartMenu
     {
     public:
+
         static bool Initialize();
 
-        static bool Show();
+        static void OpenExplorer();
 
-        static bool Hide();
+        static void OpenSettings();
 
-        static bool Toggle();
+        static void OpenNotebook();
 
-        static bool Refresh();
-
-    private:
-        static bool visible;
-
-        static bool DrawHeader();
-
-        static bool DrawPinnedApps();
-
-        static bool DrawAllApps();
-
-        static bool DrawPowerMenu();
-
-        static bool DrawUserProfile();
+        static void OpenTerminal();
     };
 }

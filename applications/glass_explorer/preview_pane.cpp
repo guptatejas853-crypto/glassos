@@ -1,37 +1,28 @@
 #include "preview_pane.h"
 
-#include <iostream>
-
 using namespace GlassOS;
 
-std::string PreviewPane::currentFile;
+std::string PreviewPane::currentFile = "";
 
 bool PreviewPane::Initialize()
 {
-    currentFile.clear();
-    return true;
-}
-
-bool PreviewPane::ShowPreview(
-    const std::string& filePath)
-{
-    currentFile = filePath;
-
-    std::cout
-        << "[Preview] "
-        << filePath
-        << std::endl;
+    currentFile = "";
 
     return true;
 }
 
-bool PreviewPane::Clear()
+void PreviewPane::ShowFile(
+    const std::string& path)
 {
-    currentFile.clear();
-    return true;
+    currentFile = path;
 }
 
 std::string PreviewPane::CurrentFile()
 {
     return currentFile;
+}
+
+void PreviewPane::Clear()
+{
+    currentFile.clear();
 }

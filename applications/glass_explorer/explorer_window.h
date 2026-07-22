@@ -1,20 +1,24 @@
 #pragma once
 
+#include <string>
+
 namespace GlassOS
 {
     class ExplorerWindow
     {
     public:
+
         static bool Initialize();
 
-        static bool Create();
+        static void Open(
+            const std::string& path);
 
-        static bool Show();
+        static std::string CurrentPath();
 
-        static bool Hide();
+        static void Refresh();
 
-        static bool Close();
+    private:
 
-        static bool Refresh();
+        static std::string currentPath;
     };
 }

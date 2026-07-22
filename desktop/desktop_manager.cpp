@@ -8,7 +8,6 @@
 
 using namespace GlassOS;
 
-
 bool DesktopManager::Initialize()
 {
     WallpaperManager::Initialize();
@@ -20,39 +19,30 @@ bool DesktopManager::Initialize()
     return true;
 }
 
-
 bool DesktopManager::StartDesktop()
 {
-    WallpaperManager::Show();
     Taskbar::Show();
-    StartMenu::Hide();
 
     return true;
 }
-
 
 bool DesktopManager::ShutdownDesktop()
 {
     Taskbar::Hide();
-    QuickCenter::Hide();
-    NotificationCenter::Hide();
 
     return true;
 }
-
 
 bool DesktopManager::RefreshDesktop()
 {
-    WallpaperManager::Refresh();
+    Taskbar::Refresh();
 
     return true;
 }
-
 
 bool DesktopManager::LockDesktop()
 {
     Taskbar::Hide();
-    QuickCenter::Hide();
 
     return true;
 }

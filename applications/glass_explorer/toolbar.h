@@ -1,26 +1,21 @@
 #pragma once
 
-#include <string>
-#include <vector>
-
 namespace GlassOS
 {
-    struct ToolbarButton
-    {
-        std::string id;
-        std::string label;
-    };
-
     class Toolbar
     {
     public:
+
         static bool Initialize();
 
-        static bool LoadDefaultButtons();
+        static void Back();
 
-        static const std::vector<ToolbarButton>& GetButtons();
+        static void Forward();
+
+        static void Refresh();
 
     private:
-        static std::vector<ToolbarButton> buttons;
+
+        static bool ready;
     };
 }

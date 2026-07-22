@@ -5,23 +5,17 @@ namespace GlassOS
     class QuickCenter
     {
     public:
+
         static bool Initialize();
 
-        static bool Show();
+        static void Show();
 
-        static bool Hide();
+        static void Hide();
 
-        static bool Toggle();
-
-        static bool Refresh();
+        static bool IsVisible();
 
     private:
+
         static bool visible;
-
-        static bool DrawHeader();
-
-        static bool DrawTiles();
-
-        static bool DrawBatteryCard();
     };
 }

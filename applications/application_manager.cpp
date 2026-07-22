@@ -2,8 +2,7 @@
 
 using namespace GlassOS;
 
-std::vector<
-    std::shared_ptr<Application>>
+std::vector<std::shared_ptr<Application>>
 ApplicationManager::m_apps;
 
 bool ApplicationManager::Initialize()

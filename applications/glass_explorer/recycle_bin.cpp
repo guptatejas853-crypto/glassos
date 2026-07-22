@@ -1,74 +1,49 @@
 #include "recycle_bin.h"
 
-#include <iostream>
-
 using namespace GlassOS;
 
-std::vector<RecycleItem>
-RecycleBin::items;
+std::vector<std::string> RecycleBin::files;
+
 
 bool RecycleBin::Initialize()
 {
-    items.clear();
+    files.clear();
+
     return true;
 }
 
-bool RecycleBin::Delete(
+
+void RecycleBin::Move(
     const std::string& path)
 {
-    RecycleItem item;
-
-    item.originalPath = path;
-    item.recyclePath = ".glass/recycle/" + path;
-    item.deletedTime = "Current Time";
-
-    items.push_back(item);
-
-    std::cout
-        << "[Recycle Bin] "
-        << path
-        << " moved to recycle bin."
-        << std::endl;
-
-    return true;
+    files.push_back(path);
 }
 
-bool RecycleBin::Restore(
-    const std::string& recyclePath)
+
+void RecycleBin::Restore(
+    const std::string& path)
 {
-    for(auto it = items.begin();
-        it != items.end();
+    for(auto it = files.begin();
+        it != files.end();
         ++it)
     {
-        if(it->recyclePath == recyclePath)
+        if(*it == path)
         {
-            std::cout
-                << "[Recycle Bin] Restored "
-                << recyclePath
-                << std::endl;
-
-            items.erase(it);
-
-            return true;
+            files.erase(it);
+            break;
         }
     }
-
-    return false;
 }
 
-bool RecycleBin::Empty()
+
+void RecycleBin::Empty()
 {
-    items.clear();
-
-    std::cout
-        << "[Recycle Bin] Emptied"
-        << std::endl;
-
-    return true;
+    files.clear();
 }
 
-const std::vector<RecycleItem>&
-RecycleBin::GetItems()
+
+std::vector<std::string>
+RecycleBin::Items()
 {
-    return items;
+    return files;
 }

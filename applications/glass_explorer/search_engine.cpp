@@ -7,47 +7,27 @@ using namespace GlassOS;
 namespace fs = std::filesystem;
 
 std::vector<std::string>
-SearchEngine::results;
-
-bool SearchEngine::Initialize()
-{
-    results.clear();
-    return true;
-}
-
-std::vector<std::string>
 SearchEngine::Search(
-    const std::string& directory,
-    const std::string& query)
+    const std::string& path,
+    const std::string& keyword)
 {
-    results.clear();
+    std::vector<std::string> results;
 
-    if(!fs::exists(directory))
+    if(!fs::exists(path))
         return results;
 
     for(const auto& entry :
-        fs::recursive_directory_iterator(directory))
+        fs::recursive_directory_iterator(path))
     {
-        std::string name =
+        auto name =
             entry.path().filename().string();
 
-        if(name.find(query) != std::string::npos)
+        if(name.find(keyword) != std::string::npos)
         {
             results.push_back(
                 entry.path().string());
         }
     }
 
-    return results;
-}
-
-void SearchEngine::ClearResults()
-{
-    results.clear();
-}
-
-const std::vector<std::string>&
-SearchEngine::GetResults()
-{
     return results;
 }

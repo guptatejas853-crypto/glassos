@@ -1,55 +1,43 @@
 #include "explorer_window.h"
 
-#include <iostream>
+#include "filesystem_engine.h"
+#include "address_bar.h"
+#include "preview_pane.h"
 
 using namespace GlassOS;
 
+std::string ExplorerWindow::currentPath = "/";
+
+
 bool ExplorerWindow::Initialize()
 {
-    return true;
-}
-
-bool ExplorerWindow::Create()
-{
-    std::cout
-        << "[Glass Explorer] Window Created"
-        << std::endl;
+    currentPath = "/";
 
     return true;
 }
 
-bool ExplorerWindow::Show()
-{
-    std::cout
-        << "[Glass Explorer] Window Visible"
-        << std::endl;
 
-    return true;
+void ExplorerWindow::Open(
+    const std::string& path)
+{
+    currentPath = path;
+
+    AddressBar::SetPath(path);
+
+    FileSystemEngine::ListDirectory(path);
 }
 
-bool ExplorerWindow::Hide()
-{
-    std::cout
-        << "[Glass Explorer] Window Hidden"
-        << std::endl;
 
-    return true;
+std::string ExplorerWindow::CurrentPath()
+{
+    return currentPath;
 }
 
-bool ExplorerWindow::Close()
+
+void ExplorerWindow::Refresh()
 {
-    std::cout
-        << "[Glass Explorer] Window Closed"
-        << std::endl;
+    FileSystemEngine::ListDirectory(
+        currentPath);
 
-    return true;
-}
-
-bool ExplorerWindow::Refresh()
-{
-    std::cout
-        << "[Glass Explorer] Refreshed"
-        << std::endl;
-
-    return true;
+    PreviewPane::Clear();
 }

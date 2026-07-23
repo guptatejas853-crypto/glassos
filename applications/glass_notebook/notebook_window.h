@@ -1,20 +1,21 @@
 #pragma once
 
+#include <string>
+
 namespace GlassOS
 {
     class NotebookWindow
     {
     public:
+
         static bool Initialize();
 
-        static bool Create();
+        static bool NewDocument();
 
-        static bool Show();
+        static bool OpenDocument(
+            const std::string& file);
 
-        static bool Hide();
-
-        static bool Close();
-
-        static bool Refresh();
+        static bool SaveDocument(
+            const std::string& file);
     };
 }

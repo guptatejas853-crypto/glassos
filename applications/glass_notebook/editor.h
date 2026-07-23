@@ -7,25 +7,18 @@ namespace GlassOS
     class Editor
     {
     public:
+
         static bool Initialize();
 
-        static bool NewDocument();
-
-        static bool SetText(
+        static void SetText(
             const std::string& text);
 
         static std::string GetText();
 
-        static bool InsertText(
-            const std::string& text);
-
-        static bool Clear();
-
-        static bool IsModified();
+        static void Clear();
 
     private:
-        static std::string documentText;
 
-        static bool modified;
+        static std::string text;
     };
 }

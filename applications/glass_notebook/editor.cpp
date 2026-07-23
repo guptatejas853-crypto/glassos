@@ -2,58 +2,27 @@
 
 using namespace GlassOS;
 
-std::string Editor::documentText;
-
-bool Editor::modified = false;
+std::string Editor::text;
 
 bool Editor::Initialize()
 {
-    documentText.clear();
-    modified = false;
+    text.clear();
 
     return true;
 }
 
-bool Editor::NewDocument()
+void Editor::SetText(
+    const std::string& value)
 {
-    documentText.clear();
-    modified = false;
-
-    return true;
-}
-
-bool Editor::SetText(
-    const std::string& text)
-{
-    documentText = text;
-    modified = true;
-
-    return true;
+    text = value;
 }
 
 std::string Editor::GetText()
 {
-    return documentText;
+    return text;
 }
 
-bool Editor::InsertText(
-    const std::string& text)
+void Editor::Clear()
 {
-    documentText += text;
-    modified = true;
-
-    return true;
-}
-
-bool Editor::Clear()
-{
-    documentText.clear();
-    modified = false;
-
-    return true;
-}
-
-bool Editor::IsModified()
-{
-    return modified;
+    text.clear();
 }

@@ -17,8 +17,20 @@ std::string ResponseGenerator::Generate(
     if(command == "terminal")
         return "Opening AI Terminal...";
 
+    if(command == "browser")
+        return "Opening Glass Browser...";
+
     if(command == "help")
-        return "Available commands: open explorer, open settings, open notebook, open terminal, help";
+    {
+        return
+            "Available commands:\n"
+            "Open Explorer\n"
+            "Open Browser\n"
+            "Open Notebook\n"
+            "Open Settings\n"
+            "Open Terminal\n"
+            "Help";
+    }
 
     return "I don't understand that command yet.";
 }

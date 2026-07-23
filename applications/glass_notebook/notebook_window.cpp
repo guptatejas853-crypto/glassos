@@ -1,55 +1,35 @@
 #include "notebook_window.h"
 
-#include <iostream>
+#include "editor.h"
+#include "document_manager.h"
 
 using namespace GlassOS;
 
 bool NotebookWindow::Initialize()
 {
-    return true;
+    return Editor::Initialize();
 }
 
-bool NotebookWindow::Create()
+bool NotebookWindow::NewDocument()
 {
-    std::cout
-        << "[Glass Notebook] Window Created"
-        << std::endl;
-
-    return true;
-}
-
-bool NotebookWindow::Show()
-{
-    std::cout
-        << "[Glass Notebook] Window Visible"
-        << std::endl;
+    Editor::Clear();
 
     return true;
 }
 
-bool NotebookWindow::Hide()
+bool NotebookWindow::OpenDocument(
+    const std::string& file)
 {
-    std::cout
-        << "[Glass Notebook] Window Hidden"
-        << std::endl;
+    Editor::SetText(
+        DocumentManager::Load(file));
 
     return true;
 }
 
-bool NotebookWindow::Close()
+bool NotebookWindow::SaveDocument(
+    const std::string& file)
 {
-    std::cout
-        << "[Glass Notebook] Window Closed"
-        << std::endl;
-
-    return true;
-}
-
-bool NotebookWindow::Refresh()
-{
-    std::cout
-        << "[Glass Notebook] Refreshed"
-        << std::endl;
-
-    return true;
+    return DocumentManager::Save(
+        file,
+        Editor::GetText());
 }

@@ -2,26 +2,56 @@
 
 using namespace GlassOS;
 
+bool CommandParser::Initialize()
+{
+    return true;
+}
+
+bool CommandParser::IsCommand(
+    const std::string& input)
+{
+    return !input.empty() &&
+           input[0] == '/';
+}
+
 std::string CommandParser::Parse(
     const std::string& input)
 {
-    if(input == "open explorer")
-        return "explorer";
+    if (!IsCommand(input))
+        return "";
 
-    if(input == "open settings")
-        return "settings";
+    std::size_t space = input.find(' ');
 
-    if(input == "open notebook")
-        return "notebook";
+    if (space == std::string::npos)
+        return input;
 
-    if(input == "open terminal")
-        return "terminal";
-
-    if(input == "open browser")
-        return "browser";
-
-    if(input == "help")
-        return "help";
-
-    return "unknown";
+    return input.substr(0, space);
 }
+
+std::string CommandParser::GetArguments(
+    const std::string& input)
+{
+    std::size_t space = input.find(' ');
+
+    if (space == std::string::npos)
+        return "";
+
+    return Trim(
+        input.substr(space + 1));
+}
+
+std::string CommandParser::Trim(
+    const std::string& text)
+{
+    std::size_t first =
+        text.find_first_not_of(" ");
+
+    if (first == std::string::npos)
+        return "";
+
+    std::size_t last =
+        text.find_last_not_of(" ");
+
+    return text.substr(
+        first,
+        last - first + 1);

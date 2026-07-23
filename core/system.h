@@ -1,6 +1,10 @@
-#ifndef SYSTEM_H
-#define SYSTEM_H
+#pragma once
 
-void system_init(void);
+namespace GlassOS
+{
+    bool SystemInitialize();
 
-#endif
+    bool SystemStart();
+
+    void SystemShutdown();
+}

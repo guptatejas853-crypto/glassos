@@ -7,26 +7,12 @@ namespace GlassOS
     class DocumentManager
     {
     public:
-        static bool Initialize();
-
-        static bool New();
-
-        static bool Open(
-            const std::string& filePath);
 
         static bool Save(
-            const std::string& filePath);
+            const std::string& file,
+            const std::string& text);
 
-        static bool SaveAs(
-            const std::string& filePath);
-
-        static std::string CurrentFile();
-
-        static bool IsOpened();
-
-    private:
-        static std::string currentFile;
-
-        static bool opened;
+        static std::string Load(
+            const std::string& file);
     };
 }

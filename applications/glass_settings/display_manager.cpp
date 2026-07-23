@@ -1,87 +1,61 @@
 #include "display_manager.h"
 
+#include "storage_manager.h"
+
 using namespace GlassOS;
-
-std::string DisplayManager::resolution =
-    "1920x1080";
-
-int DisplayManager::refreshRate = 60;
-
-int DisplayManager::scaling = 100;
-
-std::string DisplayManager::orientation =
-    "Landscape";
-
 
 bool DisplayManager::Initialize()
 {
-    resolution = "1920x1080";
+    if(StorageManager::GetValue("resolution").empty())
+    {
+        StorageManager::SetValue(
+            "resolution",
+            "1920x1080");
+    }
 
-    refreshRate = 60;
+    if(StorageManager::GetValue("brightness").empty())
+    {
+        StorageManager::SetValue(
+            "brightness",
+            "100");
+    }
 
-    scaling = 100;
-
-    orientation = "Landscape";
+    StorageManager::Save();
 
     return true;
 }
 
-
-bool DisplayManager::SetResolution(
-    const std::string& value)
+void DisplayManager::SetResolution(
+    const std::string& resolution)
 {
-    resolution = value;
+    StorageManager::SetValue(
+        "resolution",
+        resolution);
 
-    return true;
+    StorageManager::Save();
 }
-
 
 std::string DisplayManager::GetResolution()
 {
-    return resolution;
+    return StorageManager::GetValue(
+        "resolution");
 }
 
-
-bool DisplayManager::SetRefreshRate(
-    int rate)
+void DisplayManager::SetBrightness(
+    int brightness)
 {
-    refreshRate = rate;
+    StorageManager::SetValue(
+        "brightness",
+        std::to_string(brightness));
 
-    return true;
+    StorageManager::Save();
 }
 
-
-int DisplayManager::GetRefreshRate()
+int DisplayManager::GetBrightness()
 {
-    return refreshRate;
-}
+    auto value =
+        StorageManager::GetValue(
+            "brightness");
 
-
-bool DisplayManager::SetScaling(
-    int scale)
-{
-    scaling = scale;
-
-    return true;
-}
-
-
-int DisplayManager::GetScaling()
-{
-    return scaling;
-}
-
-
-bool DisplayManager::SetOrientation(
-    const std::string& value)
-{
-    orientation = value;
-
-    return true;
-}
-
-
-std::string DisplayManager::GetOrientation()
-{
-    return orientation;
+    return value.empty() ? 100 : std::stoi(value);
 }

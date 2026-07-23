@@ -20,5 +20,26 @@ std::string Assist::Process(
     auto command =
         CommandParser::Parse(input);
 
+    if(command == "explorer")
+    {
+        // ApplicationLauncher::LaunchExplorer();
+    }
+    else if(command == "browser")
+    {
+        // ApplicationLauncher::LaunchBrowser();
+    }
+    else if(command == "settings")
+    {
+        // ApplicationLauncher::LaunchSettings();
+    }
+    else if(command == "notebook")
+    {
+        // ApplicationLauncher::LaunchNotebook();
+    }
+    else if(command == "terminal")
+    {
+        // ApplicationLauncher::LaunchTerminal();
+    }
+
     return ResponseGenerator::Generate(command);
 }

@@ -1,14 +1,27 @@
-#pragma once
+#include "command_parser.h"
 
-#include <string>
+using namespace GlassOS;
 
-namespace GlassOS
+std::string CommandParser::Parse(
+    const std::string& input)
 {
-    class CommandParser
-    {
-    public:
+    if(input == "open explorer")
+        return "explorer";
 
-        static std::string Parse(
-            const std::string& input);
-    };
+    if(input == "open settings")
+        return "settings";
+
+    if(input == "open notebook")
+        return "notebook";
+
+    if(input == "open terminal")
+        return "terminal";
+
+    if(input == "open browser")
+        return "browser";
+
+    if(input == "help")
+        return "help";
+
+    return "unknown";
 }

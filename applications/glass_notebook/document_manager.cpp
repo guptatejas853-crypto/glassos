@@ -1,81 +1,35 @@
 #include "document_manager.h"
-#include "editor.h"
 
 #include <fstream>
 #include <sstream>
 
 using namespace GlassOS;
 
-std::string DocumentManager::currentFile;
-
-bool DocumentManager::opened = false;
-
-bool DocumentManager::Initialize()
+bool DocumentManager::Save(
+    const std::string& file,
+    const std::string& text)
 {
-    currentFile.clear();
-    opened = false;
+    std::ofstream out(file);
 
-    return true;
-}
-
-bool DocumentManager::New()
-{
-    Editor::NewDocument();
-
-    currentFile.clear();
-    opened = false;
-
-    return true;
-}
-
-bool DocumentManager::Open(
-    const std::string& filePath)
-{
-    std::ifstream file(filePath);
-
-    if(!file.is_open())
+    if(!out.is_open())
         return false;
+
+    out << text;
+
+    return true;
+}
+
+std::string DocumentManager::Load(
+    const std::string& file)
+{
+    std::ifstream in(file);
+
+    if(!in.is_open())
+        return "";
 
     std::stringstream buffer;
 
-    buffer << file.rdbuf();
+    buffer << in.rdbuf();
 
-    Editor::SetText(buffer.str());
-
-    currentFile = filePath;
-    opened = true;
-
-    return true;
-}
-
-bool DocumentManager::Save(
-    const std::string& filePath)
-{
-    std::ofstream file(filePath);
-
-    if(!file.is_open())
-        return false;
-
-    file << Editor::GetText();
-
-    currentFile = filePath;
-    opened = true;
-
-    return true;
-}
-
-bool DocumentManager::SaveAs(
-    const std::string& filePath)
-{
-    return Save(filePath);
-}
-
-std::string DocumentManager::CurrentFile()
-{
-    return currentFile;
-}
-
-bool DocumentManager::IsOpened()
-{
-    return opened;
+    return buffer.str();
 }

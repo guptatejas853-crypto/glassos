@@ -2,6 +2,12 @@
 
 #include <iostream>
 
+#include "../../ui/renderer.h"
+#include "../../ui/glass_effect.h"
+
+#include "../../desktop/session_manager.h"
+#include "../../desktop/desktop_manager.h"
+
 using namespace GlassOS;
 
 bool Kernel::Initialize()
@@ -19,6 +25,20 @@ bool Kernel::Initialize()
 
     if (!InitializeIPC())
         return false;
+
+    if (!Renderer::Initialize())
+        return false;
+
+    if (!GlassEffect::Initialize())
+        return false;
+
+    if (!SessionManager::Initialize())
+        return false;
+
+    if (!DesktopManager::Initialize())
+        return false;
+
+    DesktopManager::StartDesktop();
 
     std::cout << "[Kernel] Initialization Complete.\n";
 

@@ -58,3 +58,28 @@ bool GlassEffect::SetGlow(bool enabled)
     glowEnabled = enabled;
     return true;
 }
+
+float GlassEffect::GetBlurRadius()
+{
+    return blurRadius;
+}
+
+float GlassEffect::GetOpacity()
+{
+    return opacity;
+}
+
+float GlassEffect::GetCornerRadius()
+{
+    return cornerRadius;
+}
+
+bool GlassEffect::ShadowEnabled()
+{
+    return shadowEnabled;
+}
+
+bool GlassEffect::GlowEnabled()
+{
+    return glowEnabled;
+}

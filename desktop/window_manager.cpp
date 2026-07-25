@@ -1,60 +1,72 @@
 #include "window_manager.h"
 
-#include <vector>
-#include <algorithm>
-
 using namespace GlassOS;
 
-namespace
-{
-    std::vector<int> windows;
-    bool running = false;
-}
+std::vector<Window> WindowManager::windows;
 
 bool WindowManager::Initialize()
 {
     windows.clear();
-    running = false;
     return true;
 }
 
 bool WindowManager::Start()
 {
-    running = true;
     return true;
 }
 
 bool WindowManager::Refresh()
 {
-    return running;
+    return true;
 }
 
 bool WindowManager::Lock()
 {
-    running = false;
     return true;
 }
 
 bool WindowManager::Shutdown()
 {
     windows.clear();
-    running = false;
     return true;
 }
 
-bool WindowManager::RegisterWindow(int id)
+bool WindowManager::CreateWindow(int id, const std::string& title)
 {
-    windows.push_back(id);
+    Window window;
+
+    window.id = id;
+    window.title = title;
+    window.visible = true;
+
+    windows.push_back(window);
+
     return true;
 }
 
 bool WindowManager::CloseWindow(int id)
 {
-    windows.erase(
-        std::remove(windows.begin(), windows.end(), id),
-        windows.end());
+    for (auto it = windows.begin(); it != windows.end(); ++it)
+    {
+        if (it->id == id)
+        {
+            windows.erase(it);
+            return true;
+        }
+    }
 
-    return true;
+    return false;
+}
+
+Window* WindowManager::GetWindow(int id)
+{
+    for (auto& window : windows)
+    {
+        if (window.id == id)
+            return &window;
+    }
+
+    return nullptr;
 }
 
 int WindowManager::WindowCount()

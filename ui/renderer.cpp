@@ -4,6 +4,11 @@
 
 using namespace GlassOS;
 
+namespace
+{
+    bool frameActive = false;
+}
+
 bool Renderer::Initialize()
 {
     std::cout << "[Renderer] Initialized\n";
@@ -12,13 +17,19 @@ bool Renderer::Initialize()
 
 bool Renderer::BeginFrame()
 {
+    frameActive = true;
+
     std::cout << "[Renderer] Begin Frame\n";
+
     return true;
 }
 
 bool Renderer::EndFrame()
 {
+    frameActive = false;
+
     std::cout << "[Renderer] End Frame\n";
+
     return true;
 }
 
@@ -28,6 +39,9 @@ bool Renderer::DrawRectangle(
     int width,
     int height)
 {
+    if (!frameActive)
+        return false;
+
     std::cout
         << "[Renderer] Rectangle "
         << x << "," << y
@@ -45,6 +59,9 @@ bool Renderer::DrawRoundedRectangle(
     int height,
     int radius)
 {
+    if (!frameActive)
+        return false;
+
     std::cout
         << "[Renderer] Rounded Rectangle "
         << x << "," << y
@@ -61,6 +78,9 @@ bool Renderer::DrawText(
     int y,
     const std::string& text)
 {
+    if (!frameActive)
+        return false;
+
     std::cout
         << "[Renderer] Text: "
         << text
@@ -74,6 +94,9 @@ bool Renderer::DrawImage(
     int y,
     const std::string& imagePath)
 {
+    if (!frameActive)
+        return false;
+
     std::cout
         << "[Renderer] Image: "
         << imagePath

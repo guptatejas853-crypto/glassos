@@ -2,31 +2,42 @@
 
 namespace GlassOS
 {
-    class GlassEffect
-    {
-    public:
-        static bool Initialize();
 
-        static bool EnableBlur();
+class GlassEffect
+{
+public:
+    // Initialization
+    static bool Initialize();
 
-        static bool DisableBlur();
+    // Blur
+    static bool EnableBlur();
+    static bool DisableBlur();
+    static bool SetBlurRadius(float radius);
+    static float GetBlurRadius();
 
-        static bool SetBlurRadius(float radius);
+    // Opacity
+    static bool SetOpacity(float value);
+    static float GetOpacity();
 
-        static bool SetOpacity(float opacity);
+    // Rounded Corners
+    static bool SetCornerRadius(float radius);
+    static float GetCornerRadius();
 
-        static bool SetCornerRadius(float radius);
+    // Shadow
+    static bool SetShadow(bool enabled);
+    static bool ShadowEnabled();
 
-        static bool SetShadow(bool enabled);
+    // Glow
+    static bool SetGlow(bool enabled);
+    static bool GlowEnabled();
 
-        static bool SetGlow(bool enabled);
+private:
+    static float blurRadius;
+    static float opacity;
+    static float cornerRadius;
 
-    private:
-        static float blurRadius;
-        static float opacity;
-        static float cornerRadius;
+    static bool shadowEnabled;
+    static bool glowEnabled;
+};
 
-        static bool shadowEnabled;
-        static bool glowEnabled;
-    };
-}
+} // namespace GlassOS

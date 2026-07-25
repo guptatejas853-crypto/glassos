@@ -2,6 +2,7 @@
 
 namespace GlassOS
 {
+
 class WindowManager
 {
 public:
@@ -11,4 +12,5 @@ public:
     static bool Lock();
     static bool Shutdown();
 };
+
 }

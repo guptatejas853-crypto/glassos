@@ -1,15 +1,17 @@
 add_executable(glassos
-    main.c
+    ../main.cpp
 )
 
 target_link_libraries(glassos
     PRIVATE
-        glass_kernel
-        glass_browser
+        Kernel
+        Desktop
+        WindowManager
 )
 
 target_include_directories(glassos
     PRIVATE
-        ${PROJECT_SOURCE_DIR}/include
-        ${PROJECT_SOURCE_DIR}/browser
+        ${PROJECT_SOURCE_DIR}/kernel/include
+        ${PROJECT_SOURCE_DIR}/desktop
+        ${PROJECT_SOURCE_DIR}/window_manager
 )

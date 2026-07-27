@@ -2,7 +2,7 @@
 
 namespace GlassOS
 {
-    class WindowManager
+    class Desktop
     {
     public:
         static bool Initialize();

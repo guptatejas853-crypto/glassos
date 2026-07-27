@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/glassos.dir/link.d CMakeFiles/glassos.dir/__/main.cpp.o -o glassos  ../kernel/libKernel.a ../desktop/libDesktop.a ../window_manager/libWindowManager.a

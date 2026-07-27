@@ -1,0 +1,2 @@
+/usr/bin/ar qc libDesktop.a CMakeFiles/Desktop.dir/desktop.cpp.o
+/usr/bin/ranlib libDesktop.a

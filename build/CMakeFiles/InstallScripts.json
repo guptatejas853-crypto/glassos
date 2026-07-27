@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/Users/gupta/Downloads/glassos/build/cmake_install.cmake",
+		"/mnt/c/Users/gupta/Downloads/glassos/build/kernel/cmake_install.cmake",
+		"/mnt/c/Users/gupta/Downloads/glassos/build/desktop/cmake_install.cmake",
+		"/mnt/c/Users/gupta/Downloads/glassos/build/window_manager/cmake_install.cmake",
+		"/mnt/c/Users/gupta/Downloads/glassos/build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

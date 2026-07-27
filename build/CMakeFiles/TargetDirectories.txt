@@ -1,0 +1,14 @@
+/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/kernel/CMakeFiles/Kernel.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/kernel/CMakeFiles/edit_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/kernel/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/desktop/CMakeFiles/Desktop.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/desktop/CMakeFiles/edit_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/desktop/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/window_manager/CMakeFiles/WindowManager.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/window_manager/CMakeFiles/edit_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/window_manager/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/src/CMakeFiles/glassos.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/src/CMakeFiles/edit_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/src/CMakeFiles/rebuild_cache.dir

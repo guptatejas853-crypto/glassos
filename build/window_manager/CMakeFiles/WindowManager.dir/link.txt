@@ -1,0 +1,2 @@
+/usr/bin/ar qc libWindowManager.a CMakeFiles/WindowManager.dir/window_manager.cpp.o
+/usr/bin/ranlib libWindowManager.a

@@ -12,6 +12,7 @@ target_link_libraries(glassos
         GlassEffect
         Taskbar
         StartMenu
+        Terminal
 )
 
 target_include_directories(glassos
@@ -24,4 +25,5 @@ target_include_directories(glassos
         ${PROJECT_SOURCE_DIR}/glass_effect
         ${PROJECT_SOURCE_DIR}/taskbar
         ${PROJECT_SOURCE_DIR}/start_menu
+        ${PROJECT_SOURCE_DIR}/terminal
 )

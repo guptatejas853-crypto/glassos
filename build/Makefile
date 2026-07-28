@@ -221,6 +221,19 @@ StartMenu/fast:
 .PHONY : StartMenu/fast
 
 #=============================================================================
+# Target rules for targets named Terminal
+
+# Build rule for target.
+Terminal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Terminal
+.PHONY : Terminal
+
+# fast build rule for target.
+Terminal/fast:
+	$(MAKE) $(MAKESILENT) -f terminal/CMakeFiles/Terminal.dir/build.make terminal/CMakeFiles/Terminal.dir/build
+.PHONY : Terminal/fast
+
+#=============================================================================
 # Target rules for targets named glassos
 
 # Build rule for target.
@@ -248,6 +261,7 @@ help:
 	@echo "... Renderer"
 	@echo "... StartMenu"
 	@echo "... Taskbar"
+	@echo "... Terminal"
 	@echo "... WindowManager"
 	@echo "... glassos"
 .PHONY : help

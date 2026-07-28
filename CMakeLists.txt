@@ -14,6 +14,7 @@ add_subdirectory(explorer)
 add_subdirectory(glass_effect)
 add_subdirectory(taskbar)
 add_subdirectory(start_menu)
+add_subdirectory(terminal)
 add_subdirectory(src)
 
 # Add these later after creating proper CMakeLists.txt files

@@ -8,6 +8,7 @@
 #include "glass_effect.h"
 #include "taskbar.h"
 #include "start_menu.h"
+#include "terminal.h"
 
 using namespace GlassOS;
 
@@ -27,12 +28,16 @@ int main()
     if (!GlassEffect::Initialize()) return 1;
     if (!Taskbar::Initialize()) return 1;
     if (!StartMenu::Initialize()) return 1;
+    if (!Terminal::Initialize()) return 1;
 
     Renderer::BeginFrame();
 
     Taskbar::Draw();
     StartMenu::Open();
     Explorer::Open();
+    Terminal::Open();
+
+    Terminal::Execute("help");
 
     Renderer::EndFrame();
 

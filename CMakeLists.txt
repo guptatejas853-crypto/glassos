@@ -9,6 +9,11 @@ set(CMAKE_CXX_STANDARD 17)
 add_subdirectory(kernel)
 add_subdirectory(desktop)
 add_subdirectory(window_manager)
+add_subdirectory(renderer)
+add_subdirectory(explorer)
+add_subdirectory(glass_effect)
+add_subdirectory(taskbar)
+add_subdirectory(start_menu)
 add_subdirectory(src)
 
 # Add these later after creating proper CMakeLists.txt files

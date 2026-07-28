@@ -1,0 +1,2 @@
+/usr/bin/ar qc libTaskbar.a CMakeFiles/Taskbar.dir/taskbar.cpp.o
+/usr/bin/ranlib libTaskbar.a

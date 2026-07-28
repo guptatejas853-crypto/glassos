@@ -156,6 +156,58 @@ WindowManager/fast:
 .PHONY : WindowManager/fast
 
 #=============================================================================
+# Target rules for targets named Renderer
+
+# Build rule for target.
+Renderer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Renderer
+.PHONY : Renderer
+
+# fast build rule for target.
+Renderer/fast:
+	$(MAKE) $(MAKESILENT) -f renderer/CMakeFiles/Renderer.dir/build.make renderer/CMakeFiles/Renderer.dir/build
+.PHONY : Renderer/fast
+
+#=============================================================================
+# Target rules for targets named Explorer
+
+# Build rule for target.
+Explorer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Explorer
+.PHONY : Explorer
+
+# fast build rule for target.
+Explorer/fast:
+	$(MAKE) $(MAKESILENT) -f explorer/CMakeFiles/Explorer.dir/build.make explorer/CMakeFiles/Explorer.dir/build
+.PHONY : Explorer/fast
+
+#=============================================================================
+# Target rules for targets named GlassEffect
+
+# Build rule for target.
+GlassEffect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GlassEffect
+.PHONY : GlassEffect
+
+# fast build rule for target.
+GlassEffect/fast:
+	$(MAKE) $(MAKESILENT) -f glass_effect/CMakeFiles/GlassEffect.dir/build.make glass_effect/CMakeFiles/GlassEffect.dir/build
+.PHONY : GlassEffect/fast
+
+#=============================================================================
+# Target rules for targets named Taskbar
+
+# Build rule for target.
+Taskbar: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Taskbar
+.PHONY : Taskbar
+
+# fast build rule for target.
+Taskbar/fast:
+	$(MAKE) $(MAKESILENT) -f taskbar/CMakeFiles/Taskbar.dir/build.make taskbar/CMakeFiles/Taskbar.dir/build
+.PHONY : Taskbar/fast
+
+#=============================================================================
 # Target rules for targets named glassos
 
 # Build rule for target.
@@ -177,7 +229,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Desktop"
+	@echo "... Explorer"
+	@echo "... GlassEffect"
 	@echo "... Kernel"
+	@echo "... Renderer"
+	@echo "... Taskbar"
 	@echo "... WindowManager"
 	@echo "... glassos"
 .PHONY : help

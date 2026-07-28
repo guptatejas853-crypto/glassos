@@ -6,5 +6,6 @@ namespace GlassOS
     {
     public:
         static bool Initialize();
+        static bool CreateDesktop();
     };
 }

@@ -7,6 +7,11 @@ target_link_libraries(glassos
         Kernel
         Desktop
         WindowManager
+        Renderer
+        Explorer
+        GlassEffect
+        Taskbar
+        StartMenu
 )
 
 target_include_directories(glassos
@@ -14,4 +19,9 @@ target_include_directories(glassos
         ${PROJECT_SOURCE_DIR}/kernel/include
         ${PROJECT_SOURCE_DIR}/desktop
         ${PROJECT_SOURCE_DIR}/window_manager
+        ${PROJECT_SOURCE_DIR}/renderer
+        ${PROJECT_SOURCE_DIR}/explorer
+        ${PROJECT_SOURCE_DIR}/glass_effect
+        ${PROJECT_SOURCE_DIR}/taskbar
+        ${PROJECT_SOURCE_DIR}/start_menu
 )

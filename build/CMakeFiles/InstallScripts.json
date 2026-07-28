@@ -5,6 +5,10 @@
 		"/mnt/c/Users/gupta/Downloads/glassos/build/kernel/cmake_install.cmake",
 		"/mnt/c/Users/gupta/Downloads/glassos/build/desktop/cmake_install.cmake",
 		"/mnt/c/Users/gupta/Downloads/glassos/build/window_manager/cmake_install.cmake",
+		"/mnt/c/Users/gupta/Downloads/glassos/build/renderer/cmake_install.cmake",
+		"/mnt/c/Users/gupta/Downloads/glassos/build/explorer/cmake_install.cmake",
+		"/mnt/c/Users/gupta/Downloads/glassos/build/glass_effect/cmake_install.cmake",
+		"/mnt/c/Users/gupta/Downloads/glassos/build/taskbar/cmake_install.cmake",
 		"/mnt/c/Users/gupta/Downloads/glassos/build/src/cmake_install.cmake"
 	],
 	"Parallel" : false

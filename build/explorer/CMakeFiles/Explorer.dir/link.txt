@@ -1,0 +1,2 @@
+/usr/bin/ar qc libExplorer.a CMakeFiles/Explorer.dir/explorer.cpp.o
+/usr/bin/ranlib libExplorer.a

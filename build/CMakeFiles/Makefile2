@@ -66,6 +66,10 @@ CMAKE_BINARY_DIR = /mnt/c/Users/gupta/Downloads/glassos/build
 all: kernel/all
 all: desktop/all
 all: window_manager/all
+all: renderer/all
+all: explorer/all
+all: glass_effect/all
+all: taskbar/all
 all: src/all
 .PHONY : all
 
@@ -73,6 +77,10 @@ all: src/all
 codegen: kernel/codegen
 codegen: desktop/codegen
 codegen: window_manager/codegen
+codegen: renderer/codegen
+codegen: explorer/codegen
+codegen: glass_effect/codegen
+codegen: taskbar/codegen
 codegen: src/codegen
 .PHONY : codegen
 
@@ -80,6 +88,10 @@ codegen: src/codegen
 preinstall: kernel/preinstall
 preinstall: desktop/preinstall
 preinstall: window_manager/preinstall
+preinstall: renderer/preinstall
+preinstall: explorer/preinstall
+preinstall: glass_effect/preinstall
+preinstall: taskbar/preinstall
 preinstall: src/preinstall
 .PHONY : preinstall
 
@@ -87,6 +99,10 @@ preinstall: src/preinstall
 clean: kernel/clean
 clean: desktop/clean
 clean: window_manager/clean
+clean: renderer/clean
+clean: explorer/clean
+clean: glass_effect/clean
+clean: taskbar/clean
 clean: src/clean
 .PHONY : clean
 
@@ -110,6 +126,44 @@ desktop/clean: desktop/CMakeFiles/Desktop.dir/clean
 .PHONY : desktop/clean
 
 #=============================================================================
+# Directory level rules for directory explorer
+
+# Recursive "all" directory target.
+explorer/all: explorer/CMakeFiles/Explorer.dir/all
+.PHONY : explorer/all
+
+# Recursive "codegen" directory target.
+explorer/codegen: explorer/CMakeFiles/Explorer.dir/codegen
+.PHONY : explorer/codegen
+
+# Recursive "preinstall" directory target.
+explorer/preinstall:
+.PHONY : explorer/preinstall
+
+# Recursive "clean" directory target.
+explorer/clean: explorer/CMakeFiles/Explorer.dir/clean
+.PHONY : explorer/clean
+
+#=============================================================================
+# Directory level rules for directory glass_effect
+
+# Recursive "all" directory target.
+glass_effect/all: glass_effect/CMakeFiles/GlassEffect.dir/all
+.PHONY : glass_effect/all
+
+# Recursive "codegen" directory target.
+glass_effect/codegen: glass_effect/CMakeFiles/GlassEffect.dir/codegen
+.PHONY : glass_effect/codegen
+
+# Recursive "preinstall" directory target.
+glass_effect/preinstall:
+.PHONY : glass_effect/preinstall
+
+# Recursive "clean" directory target.
+glass_effect/clean: glass_effect/CMakeFiles/GlassEffect.dir/clean
+.PHONY : glass_effect/clean
+
+#=============================================================================
 # Directory level rules for directory kernel
 
 # Recursive "all" directory target.
@@ -129,6 +183,25 @@ kernel/clean: kernel/CMakeFiles/Kernel.dir/clean
 .PHONY : kernel/clean
 
 #=============================================================================
+# Directory level rules for directory renderer
+
+# Recursive "all" directory target.
+renderer/all: renderer/CMakeFiles/Renderer.dir/all
+.PHONY : renderer/all
+
+# Recursive "codegen" directory target.
+renderer/codegen: renderer/CMakeFiles/Renderer.dir/codegen
+.PHONY : renderer/codegen
+
+# Recursive "preinstall" directory target.
+renderer/preinstall:
+.PHONY : renderer/preinstall
+
+# Recursive "clean" directory target.
+renderer/clean: renderer/CMakeFiles/Renderer.dir/clean
+.PHONY : renderer/clean
+
+#=============================================================================
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
@@ -146,6 +219,25 @@ src/preinstall:
 # Recursive "clean" directory target.
 src/clean: src/CMakeFiles/glassos.dir/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory taskbar
+
+# Recursive "all" directory target.
+taskbar/all: taskbar/CMakeFiles/Taskbar.dir/all
+.PHONY : taskbar/all
+
+# Recursive "codegen" directory target.
+taskbar/codegen: taskbar/CMakeFiles/Taskbar.dir/codegen
+.PHONY : taskbar/codegen
+
+# Recursive "preinstall" directory target.
+taskbar/preinstall:
+.PHONY : taskbar/preinstall
+
+# Recursive "clean" directory target.
+taskbar/clean: taskbar/CMakeFiles/Taskbar.dir/clean
+.PHONY : taskbar/clean
 
 #=============================================================================
 # Directory level rules for directory window_manager
@@ -173,7 +265,7 @@ window_manager/clean: window_manager/CMakeFiles/WindowManager.dir/clean
 kernel/CMakeFiles/Kernel.dir/all:
 	$(MAKE) $(MAKESILENT) -f kernel/CMakeFiles/Kernel.dir/build.make kernel/CMakeFiles/Kernel.dir/depend
 	$(MAKE) $(MAKESILENT) -f kernel/CMakeFiles/Kernel.dir/build.make kernel/CMakeFiles/Kernel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=3,4 "Built target Kernel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=7,8 "Built target Kernel"
 .PHONY : kernel/CMakeFiles/Kernel.dir/all
 
 # Build rule for subdir invocation for target.
@@ -190,7 +282,7 @@ Kernel: kernel/CMakeFiles/Kernel.dir/rule
 # codegen rule for target.
 kernel/CMakeFiles/Kernel.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f kernel/CMakeFiles/Kernel.dir/build.make kernel/CMakeFiles/Kernel.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=3,4 "Finished codegen for target Kernel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=7,8 "Finished codegen for target Kernel"
 .PHONY : kernel/CMakeFiles/Kernel.dir/codegen
 
 # clean rule for target.
@@ -234,15 +326,15 @@ desktop/CMakeFiles/Desktop.dir/clean:
 # Target rules for target window_manager/CMakeFiles/WindowManager.dir
 
 # All Build rule for target.
-window_manager/CMakeFiles/WindowManager.dir/all:
+window_manager/CMakeFiles/WindowManager.dir/all: renderer/CMakeFiles/Renderer.dir/all
 	$(MAKE) $(MAKESILENT) -f window_manager/CMakeFiles/WindowManager.dir/build.make window_manager/CMakeFiles/WindowManager.dir/depend
 	$(MAKE) $(MAKESILENT) -f window_manager/CMakeFiles/WindowManager.dir/build.make window_manager/CMakeFiles/WindowManager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=5,6 "Built target WindowManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=13,14 "Built target WindowManager"
 .PHONY : window_manager/CMakeFiles/WindowManager.dir/all
 
 # Build rule for subdir invocation for target.
 window_manager/CMakeFiles/WindowManager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 window_manager/CMakeFiles/WindowManager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 0
 .PHONY : window_manager/CMakeFiles/WindowManager.dir/rule
@@ -254,7 +346,7 @@ WindowManager: window_manager/CMakeFiles/WindowManager.dir/rule
 # codegen rule for target.
 window_manager/CMakeFiles/WindowManager.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f window_manager/CMakeFiles/WindowManager.dir/build.make window_manager/CMakeFiles/WindowManager.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=5,6 "Finished codegen for target WindowManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=13,14 "Finished codegen for target WindowManager"
 .PHONY : window_manager/CMakeFiles/WindowManager.dir/codegen
 
 # clean rule for target.
@@ -263,20 +355,152 @@ window_manager/CMakeFiles/WindowManager.dir/clean:
 .PHONY : window_manager/CMakeFiles/WindowManager.dir/clean
 
 #=============================================================================
+# Target rules for target renderer/CMakeFiles/Renderer.dir
+
+# All Build rule for target.
+renderer/CMakeFiles/Renderer.dir/all:
+	$(MAKE) $(MAKESILENT) -f renderer/CMakeFiles/Renderer.dir/build.make renderer/CMakeFiles/Renderer.dir/depend
+	$(MAKE) $(MAKESILENT) -f renderer/CMakeFiles/Renderer.dir/build.make renderer/CMakeFiles/Renderer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=9,10 "Built target Renderer"
+.PHONY : renderer/CMakeFiles/Renderer.dir/all
+
+# Build rule for subdir invocation for target.
+renderer/CMakeFiles/Renderer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 renderer/CMakeFiles/Renderer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 0
+.PHONY : renderer/CMakeFiles/Renderer.dir/rule
+
+# Convenience name for target.
+Renderer: renderer/CMakeFiles/Renderer.dir/rule
+.PHONY : Renderer
+
+# codegen rule for target.
+renderer/CMakeFiles/Renderer.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f renderer/CMakeFiles/Renderer.dir/build.make renderer/CMakeFiles/Renderer.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=9,10 "Finished codegen for target Renderer"
+.PHONY : renderer/CMakeFiles/Renderer.dir/codegen
+
+# clean rule for target.
+renderer/CMakeFiles/Renderer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f renderer/CMakeFiles/Renderer.dir/build.make renderer/CMakeFiles/Renderer.dir/clean
+.PHONY : renderer/CMakeFiles/Renderer.dir/clean
+
+#=============================================================================
+# Target rules for target explorer/CMakeFiles/Explorer.dir
+
+# All Build rule for target.
+explorer/CMakeFiles/Explorer.dir/all: renderer/CMakeFiles/Renderer.dir/all
+	$(MAKE) $(MAKESILENT) -f explorer/CMakeFiles/Explorer.dir/build.make explorer/CMakeFiles/Explorer.dir/depend
+	$(MAKE) $(MAKESILENT) -f explorer/CMakeFiles/Explorer.dir/build.make explorer/CMakeFiles/Explorer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=3,4 "Built target Explorer"
+.PHONY : explorer/CMakeFiles/Explorer.dir/all
+
+# Build rule for subdir invocation for target.
+explorer/CMakeFiles/Explorer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 explorer/CMakeFiles/Explorer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 0
+.PHONY : explorer/CMakeFiles/Explorer.dir/rule
+
+# Convenience name for target.
+Explorer: explorer/CMakeFiles/Explorer.dir/rule
+.PHONY : Explorer
+
+# codegen rule for target.
+explorer/CMakeFiles/Explorer.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f explorer/CMakeFiles/Explorer.dir/build.make explorer/CMakeFiles/Explorer.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=3,4 "Finished codegen for target Explorer"
+.PHONY : explorer/CMakeFiles/Explorer.dir/codegen
+
+# clean rule for target.
+explorer/CMakeFiles/Explorer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f explorer/CMakeFiles/Explorer.dir/build.make explorer/CMakeFiles/Explorer.dir/clean
+.PHONY : explorer/CMakeFiles/Explorer.dir/clean
+
+#=============================================================================
+# Target rules for target glass_effect/CMakeFiles/GlassEffect.dir
+
+# All Build rule for target.
+glass_effect/CMakeFiles/GlassEffect.dir/all:
+	$(MAKE) $(MAKESILENT) -f glass_effect/CMakeFiles/GlassEffect.dir/build.make glass_effect/CMakeFiles/GlassEffect.dir/depend
+	$(MAKE) $(MAKESILENT) -f glass_effect/CMakeFiles/GlassEffect.dir/build.make glass_effect/CMakeFiles/GlassEffect.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=5,6 "Built target GlassEffect"
+.PHONY : glass_effect/CMakeFiles/GlassEffect.dir/all
+
+# Build rule for subdir invocation for target.
+glass_effect/CMakeFiles/GlassEffect.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glass_effect/CMakeFiles/GlassEffect.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 0
+.PHONY : glass_effect/CMakeFiles/GlassEffect.dir/rule
+
+# Convenience name for target.
+GlassEffect: glass_effect/CMakeFiles/GlassEffect.dir/rule
+.PHONY : GlassEffect
+
+# codegen rule for target.
+glass_effect/CMakeFiles/GlassEffect.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f glass_effect/CMakeFiles/GlassEffect.dir/build.make glass_effect/CMakeFiles/GlassEffect.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=5,6 "Finished codegen for target GlassEffect"
+.PHONY : glass_effect/CMakeFiles/GlassEffect.dir/codegen
+
+# clean rule for target.
+glass_effect/CMakeFiles/GlassEffect.dir/clean:
+	$(MAKE) $(MAKESILENT) -f glass_effect/CMakeFiles/GlassEffect.dir/build.make glass_effect/CMakeFiles/GlassEffect.dir/clean
+.PHONY : glass_effect/CMakeFiles/GlassEffect.dir/clean
+
+#=============================================================================
+# Target rules for target taskbar/CMakeFiles/Taskbar.dir
+
+# All Build rule for target.
+taskbar/CMakeFiles/Taskbar.dir/all: renderer/CMakeFiles/Renderer.dir/all
+	$(MAKE) $(MAKESILENT) -f taskbar/CMakeFiles/Taskbar.dir/build.make taskbar/CMakeFiles/Taskbar.dir/depend
+	$(MAKE) $(MAKESILENT) -f taskbar/CMakeFiles/Taskbar.dir/build.make taskbar/CMakeFiles/Taskbar.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=11,12 "Built target Taskbar"
+.PHONY : taskbar/CMakeFiles/Taskbar.dir/all
+
+# Build rule for subdir invocation for target.
+taskbar/CMakeFiles/Taskbar.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 taskbar/CMakeFiles/Taskbar.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 0
+.PHONY : taskbar/CMakeFiles/Taskbar.dir/rule
+
+# Convenience name for target.
+Taskbar: taskbar/CMakeFiles/Taskbar.dir/rule
+.PHONY : Taskbar
+
+# codegen rule for target.
+taskbar/CMakeFiles/Taskbar.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f taskbar/CMakeFiles/Taskbar.dir/build.make taskbar/CMakeFiles/Taskbar.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=11,12 "Finished codegen for target Taskbar"
+.PHONY : taskbar/CMakeFiles/Taskbar.dir/codegen
+
+# clean rule for target.
+taskbar/CMakeFiles/Taskbar.dir/clean:
+	$(MAKE) $(MAKESILENT) -f taskbar/CMakeFiles/Taskbar.dir/build.make taskbar/CMakeFiles/Taskbar.dir/clean
+.PHONY : taskbar/CMakeFiles/Taskbar.dir/clean
+
+#=============================================================================
 # Target rules for target src/CMakeFiles/glassos.dir
 
 # All Build rule for target.
 src/CMakeFiles/glassos.dir/all: kernel/CMakeFiles/Kernel.dir/all
 src/CMakeFiles/glassos.dir/all: desktop/CMakeFiles/Desktop.dir/all
 src/CMakeFiles/glassos.dir/all: window_manager/CMakeFiles/WindowManager.dir/all
+src/CMakeFiles/glassos.dir/all: renderer/CMakeFiles/Renderer.dir/all
+src/CMakeFiles/glassos.dir/all: explorer/CMakeFiles/Explorer.dir/all
+src/CMakeFiles/glassos.dir/all: glass_effect/CMakeFiles/GlassEffect.dir/all
+src/CMakeFiles/glassos.dir/all: taskbar/CMakeFiles/Taskbar.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/glassos.dir/build.make src/CMakeFiles/glassos.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/glassos.dir/build.make src/CMakeFiles/glassos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=7,8 "Built target glassos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=15,16 "Built target glassos"
 .PHONY : src/CMakeFiles/glassos.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/glassos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/glassos.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/glassos.dir/rule
@@ -288,7 +512,7 @@ glassos: src/CMakeFiles/glassos.dir/rule
 # codegen rule for target.
 src/CMakeFiles/glassos.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/glassos.dir/build.make src/CMakeFiles/glassos.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=7,8 "Finished codegen for target glassos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=15,16 "Finished codegen for target glassos"
 .PHONY : src/CMakeFiles/glassos.dir/codegen
 
 # clean rule for target.

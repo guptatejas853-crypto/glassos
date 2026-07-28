@@ -2,6 +2,7 @@ window_manager/CMakeFiles/WindowManager.dir/window_manager.cpp.o: \
  /mnt/c/Users/gupta/Downloads/glassos/window_manager/window_manager.cpp \
  /usr/include/stdc-predef.h \
  /mnt/c/Users/gupta/Downloads/glassos/window_manager/window_manager.h \
+ /mnt/c/Users/gupta/Downloads/glassos/window_manager/../renderer/renderer.h \
  /usr/include/c++/15/iostream /usr/include/c++/15/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \

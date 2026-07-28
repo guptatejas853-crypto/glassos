@@ -12,8 +12,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.2.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.3/CMakeSystem.cmake"
   "/mnt/c/Users/gupta/Downloads/glassos/desktop/CMakeLists.txt"
+  "/mnt/c/Users/gupta/Downloads/glassos/explorer/CMakeLists.txt"
+  "/mnt/c/Users/gupta/Downloads/glassos/glass_effect/CMakeLists.txt"
   "/mnt/c/Users/gupta/Downloads/glassos/kernel/CMakeLists.txt"
+  "/mnt/c/Users/gupta/Downloads/glassos/renderer/CMakeLists.txt"
   "/mnt/c/Users/gupta/Downloads/glassos/src/CMakeLists.txt"
+  "/mnt/c/Users/gupta/Downloads/glassos/taskbar/CMakeLists.txt"
   "/mnt/c/Users/gupta/Downloads/glassos/window_manager/CMakeLists.txt"
   "/usr/share/cmake-4.2/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-4.2/Modules/CMakeCXXInformation.cmake"
@@ -57,6 +61,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "kernel/CMakeFiles/CMakeDirectoryInformation.cmake"
   "desktop/CMakeFiles/CMakeDirectoryInformation.cmake"
   "window_manager/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "renderer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "explorer/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "glass_effect/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "taskbar/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -65,5 +73,9 @@ set(CMAKE_DEPEND_INFO_FILES
   "kernel/CMakeFiles/Kernel.dir/DependInfo.cmake"
   "desktop/CMakeFiles/Desktop.dir/DependInfo.cmake"
   "window_manager/CMakeFiles/WindowManager.dir/DependInfo.cmake"
+  "renderer/CMakeFiles/Renderer.dir/DependInfo.cmake"
+  "explorer/CMakeFiles/Explorer.dir/DependInfo.cmake"
+  "glass_effect/CMakeFiles/GlassEffect.dir/DependInfo.cmake"
+  "taskbar/CMakeFiles/Taskbar.dir/DependInfo.cmake"
   "src/CMakeFiles/glassos.dir/DependInfo.cmake"
   )

@@ -163,22 +163,7 @@ src/CMakeFiles/glassos.dir/__/main.cpp.o: \
  /mnt/c/Users/gupta/Downloads/glassos/kernel/include/Kernel.h \
  /mnt/c/Users/gupta/Downloads/glassos/desktop/desktop.h \
  /mnt/c/Users/gupta/Downloads/glassos/window_manager/window_manager.h \
- /usr/include/c++/15/memory /usr/include/c++/15/bits/stl_tempbuf.h \
- /usr/include/c++/15/bits/stl_uninitialized.h \
- /usr/include/c++/15/bits/stl_raw_storage_iter.h \
- /usr/include/c++/15/bits/align.h /usr/include/c++/15/bits/unique_ptr.h \
- /usr/include/c++/15/bits/shared_ptr.h \
- /usr/include/c++/15/bits/shared_ptr_base.h \
- /usr/include/c++/15/bits/allocated_ptr.h \
- /usr/include/c++/15/ext/aligned_buffer.h \
- /usr/include/c++/15/ext/concurrence.h \
- /usr/include/c++/15/bits/shared_ptr_atomic.h \
- /usr/include/c++/15/bits/atomic_base.h \
- /usr/include/c++/15/bits/atomic_lockfree_defines.h \
- /usr/include/c++/15/backward/auto_ptr.h \
- /usr/include/c++/15/pstl/glue_memory_defs.h \
- /usr/include/c++/15/pstl/execution_defs.h /usr/include/c++/15/vector \
- /usr/include/c++/15/bits/stl_vector.h \
- /usr/include/c++/15/bits/stl_bvector.h \
- /usr/include/c++/15/bits/vector.tcc \
- /mnt/c/Users/gupta/Downloads/glassos/window_manager/window.h
+ /mnt/c/Users/gupta/Downloads/glassos/renderer/renderer.h \
+ /mnt/c/Users/gupta/Downloads/glassos/explorer/explorer.h \
+ /mnt/c/Users/gupta/Downloads/glassos/glass_effect/glass_effect.h \
+ /mnt/c/Users/gupta/Downloads/glassos/taskbar/taskbar.h

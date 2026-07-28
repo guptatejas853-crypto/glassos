@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/gupta/Downloads/glassos/window_manager
+CXX_INCLUDES = -I/mnt/c/Users/gupta/Downloads/glassos/window_manager -I/mnt/c/Users/gupta/Downloads/glassos/renderer
 
 CXX_FLAGS = -std=gnu++17
 

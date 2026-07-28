@@ -1,0 +1,2 @@
+/usr/bin/ar qc libGlassEffect.a CMakeFiles/GlassEffect.dir/glass_effect.cpp.o
+/usr/bin/ranlib libGlassEffect.a

@@ -1,7 +1,13 @@
 #include <iostream>
+
 #include "Kernel.h"
 #include "desktop.h"
 #include "window_manager.h"
+#include "renderer.h"
+#include "explorer.h"
+#include "glass_effect.h"
+#include "taskbar.h"
+#include "start_menu.h"
 
 using namespace GlassOS;
 
@@ -13,25 +19,22 @@ int main()
 
     std::cout << "[GlassOS] Starting...\n";
 
-    if (!Kernel::Initialize())
-    {
-        std::cout << "[GlassOS] Kernel Initialization Failed.\n";
-        return 1;
-    }
+    if (!Kernel::Initialize()) return 1;
+    if (!Desktop::Initialize()) return 1;
+    if (!WindowManager::Initialize()) return 1;
+    if (!Renderer::Initialize()) return 1;
+    if (!Explorer::Initialize()) return 1;
+    if (!GlassEffect::Initialize()) return 1;
+    if (!Taskbar::Initialize()) return 1;
+    if (!StartMenu::Initialize()) return 1;
 
-    // Start Desktop
-    if (!Desktop::Initialize())
-    {
-        std::cout << "[GlassOS] Desktop Initialization Failed.\n";
-        return 1;
-    }
+    Renderer::BeginFrame();
 
-    // Start Window Manager
-    if (!WindowManager::Initialize())
-    {
-        std::cout << "[GlassOS] Window Manager Initialization Failed.\n";
-        return 1;
-    }
+    Taskbar::Draw();
+    StartMenu::Open();
+    Explorer::Open();
+
+    Renderer::EndFrame();
 
     std::cout << "[GlassOS] System Ready.\n";
 

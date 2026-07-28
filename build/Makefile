@@ -208,6 +208,19 @@ Taskbar/fast:
 .PHONY : Taskbar/fast
 
 #=============================================================================
+# Target rules for targets named StartMenu
+
+# Build rule for target.
+StartMenu: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 StartMenu
+.PHONY : StartMenu
+
+# fast build rule for target.
+StartMenu/fast:
+	$(MAKE) $(MAKESILENT) -f start_menu/CMakeFiles/StartMenu.dir/build.make start_menu/CMakeFiles/StartMenu.dir/build
+.PHONY : StartMenu/fast
+
+#=============================================================================
 # Target rules for targets named glassos
 
 # Build rule for target.
@@ -233,6 +246,7 @@ help:
 	@echo "... GlassEffect"
 	@echo "... Kernel"
 	@echo "... Renderer"
+	@echo "... StartMenu"
 	@echo "... Taskbar"
 	@echo "... WindowManager"
 	@echo "... glassos"

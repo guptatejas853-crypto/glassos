@@ -21,6 +21,9 @@
 /mnt/c/Users/gupta/Downloads/glassos/build/taskbar/CMakeFiles/Taskbar.dir
 /mnt/c/Users/gupta/Downloads/glassos/build/taskbar/CMakeFiles/edit_cache.dir
 /mnt/c/Users/gupta/Downloads/glassos/build/taskbar/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/start_menu/CMakeFiles/StartMenu.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/start_menu/CMakeFiles/edit_cache.dir
+/mnt/c/Users/gupta/Downloads/glassos/build/start_menu/CMakeFiles/rebuild_cache.dir
 /mnt/c/Users/gupta/Downloads/glassos/build/src/CMakeFiles/glassos.dir
 /mnt/c/Users/gupta/Downloads/glassos/build/src/CMakeFiles/edit_cache.dir
 /mnt/c/Users/gupta/Downloads/glassos/build/src/CMakeFiles/rebuild_cache.dir

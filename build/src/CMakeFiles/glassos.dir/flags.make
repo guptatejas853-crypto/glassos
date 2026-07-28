@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/gupta/Downloads/glassos/kernel/include -I/mnt/c/Users/gupta/Downloads/glassos/desktop -I/mnt/c/Users/gupta/Downloads/glassos/window_manager -I/mnt/c/Users/gupta/Downloads/glassos/renderer -I/mnt/c/Users/gupta/Downloads/glassos/explorer -I/mnt/c/Users/gupta/Downloads/glassos/glass_effect -I/mnt/c/Users/gupta/Downloads/glassos/taskbar
+CXX_INCLUDES = -I/mnt/c/Users/gupta/Downloads/glassos/kernel/include -I/mnt/c/Users/gupta/Downloads/glassos/desktop -I/mnt/c/Users/gupta/Downloads/glassos/window_manager -I/mnt/c/Users/gupta/Downloads/glassos/renderer -I/mnt/c/Users/gupta/Downloads/glassos/explorer -I/mnt/c/Users/gupta/Downloads/glassos/glass_effect -I/mnt/c/Users/gupta/Downloads/glassos/taskbar -I/mnt/c/Users/gupta/Downloads/glassos/start_menu
 
 CXX_FLAGS = -std=gnu++17
 

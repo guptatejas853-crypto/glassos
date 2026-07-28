@@ -3,11 +3,11 @@
 
 src/CMakeFiles/glassos.dir/__/main.cpp.o: /mnt/c/Users/gupta/Downloads/glassos/main.cpp \
   /mnt/c/Users/gupta/Downloads/glassos/desktop/desktop.h \
-  /mnt/c/Users/gupta/Downloads/glassos/desktop/taskbar.h \
   /mnt/c/Users/gupta/Downloads/glassos/explorer/explorer.h \
   /mnt/c/Users/gupta/Downloads/glassos/glass_effect/glass_effect.h \
   /mnt/c/Users/gupta/Downloads/glassos/kernel/include/Kernel.h \
   /mnt/c/Users/gupta/Downloads/glassos/renderer/renderer.h \
+  /mnt/c/Users/gupta/Downloads/glassos/taskbar/taskbar.h \
   /mnt/c/Users/gupta/Downloads/glassos/window_manager/window_manager.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -215,6 +215,7 @@ src/glassos: desktop/libDesktop.a \
   glass_effect/libGlassEffect.a \
   kernel/libKernel.a \
   renderer/libRenderer.a \
+  taskbar/libTaskbar.a \
   window_manager/libWindowManager.a \
   /lib64/ld-linux-x86-64.so.2 \
   /usr/lib/x86_64-linux-gnu/Scrt1.o \
@@ -252,6 +253,8 @@ src/glassos: desktop/libDesktop.a \
 /usr/lib/x86_64-linux-gnu/crti.o:
 
 /usr/lib/x86_64-linux-gnu/Scrt1.o:
+
+taskbar/libTaskbar.a:
 
 renderer/libRenderer.a:
 
@@ -306,6 +309,8 @@ desktop/libDesktop.a:
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -365,8 +370,6 @@ desktop/libDesktop.a:
 
 /usr/include/x86_64-linux-gnu/asm/types.h:
 
-/usr/include/c++/15/ostream:
-
 /usr/lib/x86_64-linux-gnu/libm.so.6:
 
 /usr/include/c++/15/debug/assertions.h:
@@ -376,6 +379,14 @@ desktop/libDesktop.a:
 /usr/include/c++/15/typeinfo:
 
 /usr/include/c++/15/bits/ostream.tcc:
+
+/usr/lib/x86_64-linux-gnu/libmvec.so.1:
+
+/usr/include/c++/15/bits/ostream.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/c++/15/bits/basic_string.tcc:
 
 /usr/include/c++/15/bits/move.h:
 
@@ -439,26 +450,6 @@ desktop/libDesktop.a:
 
 /usr/include/c++/15/cstddef:
 
-/usr/lib/x86_64-linux-gnu/libmvec.so.1:
-
-/usr/include/c++/15/bits/ostream.h:
-
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
-/usr/include/c++/15/bits/basic_string.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/mnt/c/Users/gupta/Downloads/glassos/desktop/taskbar.h:
-
-/usr/include/c++/15/new:
-
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-
-/usr/include/c++/15/bits/invoke.h:
-
-/usr/include/linux/errno.h:
-
 /usr/include/alloca.h:
 
 /mnt/c/Users/gupta/Downloads/glassos/kernel/include/Kernel.h:
@@ -472,6 +463,20 @@ desktop/libDesktop.a:
 /mnt/c/Users/gupta/Downloads/glassos/renderer/renderer.h:
 
 /usr/include/features-time64.h:
+
+/usr/include/c++/15/ostream:
+
+/mnt/c/Users/gupta/Downloads/glassos/taskbar/taskbar.h:
+
+/usr/include/c++/15/bits/allocator.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
+
+/usr/include/c++/15/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/15/bits/string_view.tcc:
 
@@ -530,16 +535,6 @@ window_manager/libWindowManager.a:
 /usr/include/c++/15/bits/exception_defines.h:
 
 /usr/include/c++/15/bits/predefined_ops.h:
-
-/usr/include/c++/15/bits/allocator.h:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-
-/usr/include/c++/15/bits/stl_iterator_base_types.h:
 
 /usr/include/ctype.h:
 
@@ -646,6 +641,14 @@ kernel/libKernel.a:
 explorer/libExplorer.a:
 
 /usr/include/c++/15/iosfwd:
+
+/usr/include/c++/15/new:
+
+/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/c++/15/bits/invoke.h:
+
+/usr/include/linux/errno.h:
 
 /usr/include/c++/15/pstl/pstl_config.h:
 

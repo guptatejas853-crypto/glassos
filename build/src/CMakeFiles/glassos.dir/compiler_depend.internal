@@ -4,11 +4,11 @@
 src/CMakeFiles/glassos.dir/__/main.cpp.o
  /mnt/c/Users/gupta/Downloads/glassos/main.cpp
  /mnt/c/Users/gupta/Downloads/glassos/desktop/desktop.h
- /mnt/c/Users/gupta/Downloads/glassos/desktop/taskbar.h
  /mnt/c/Users/gupta/Downloads/glassos/explorer/explorer.h
  /mnt/c/Users/gupta/Downloads/glassos/glass_effect/glass_effect.h
  /mnt/c/Users/gupta/Downloads/glassos/kernel/include/Kernel.h
  /mnt/c/Users/gupta/Downloads/glassos/renderer/renderer.h
+ /mnt/c/Users/gupta/Downloads/glassos/taskbar/taskbar.h
  /mnt/c/Users/gupta/Downloads/glassos/window_manager/window_manager.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
@@ -217,6 +217,7 @@ src/glassos
  /mnt/c/Users/gupta/Downloads/glassos/build/glass_effect/libGlassEffect.a
  /mnt/c/Users/gupta/Downloads/glassos/build/kernel/libKernel.a
  /mnt/c/Users/gupta/Downloads/glassos/build/renderer/libRenderer.a
+ /mnt/c/Users/gupta/Downloads/glassos/build/taskbar/libTaskbar.a
  /mnt/c/Users/gupta/Downloads/glassos/build/window_manager/libWindowManager.a
  /lib64/ld-linux-x86-64.so.2
  /usr/lib/x86_64-linux-gnu/Scrt1.o

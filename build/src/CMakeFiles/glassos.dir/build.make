@@ -103,6 +103,7 @@ src/glassos: renderer/libRenderer.a
 src/glassos: explorer/libExplorer.a
 src/glassos: glass_effect/libGlassEffect.a
 src/glassos: taskbar/libTaskbar.a
+src/glassos: start_menu/libStartMenu.a
 src/glassos: renderer/libRenderer.a
 src/glassos: src/CMakeFiles/glassos.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/gupta/Downloads/glassos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable glassos"

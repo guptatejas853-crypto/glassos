@@ -9,6 +9,7 @@
 #include "taskbar.h"
 #include "start_menu.h"
 #include "terminal.h"
+#include "settings.h"
 
 using namespace GlassOS;
 
@@ -29,6 +30,7 @@ int main()
     if (!Taskbar::Initialize()) return 1;
     if (!StartMenu::Initialize()) return 1;
     if (!Terminal::Initialize()) return 1;
+    if (!Settings::Initialize()) return 1;
 
     Renderer::BeginFrame();
 
@@ -36,6 +38,7 @@ int main()
     StartMenu::Open();
     Explorer::Open();
     Terminal::Open();
+    Settings::Open();
 
     Terminal::Execute("help");
 

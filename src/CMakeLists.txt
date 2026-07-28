@@ -13,6 +13,7 @@ target_link_libraries(glassos
         Taskbar
         StartMenu
         Terminal
+        Settings
 )
 
 target_include_directories(glassos
@@ -26,4 +27,5 @@ target_include_directories(glassos
         ${PROJECT_SOURCE_DIR}/taskbar
         ${PROJECT_SOURCE_DIR}/start_menu
         ${PROJECT_SOURCE_DIR}/terminal
+        ${PROJECT_SOURCE_DIR}/settings
 )

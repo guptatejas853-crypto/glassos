@@ -234,6 +234,19 @@ Terminal/fast:
 .PHONY : Terminal/fast
 
 #=============================================================================
+# Target rules for targets named Settings
+
+# Build rule for target.
+Settings: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Settings
+.PHONY : Settings
+
+# fast build rule for target.
+Settings/fast:
+	$(MAKE) $(MAKESILENT) -f settings/CMakeFiles/Settings.dir/build.make settings/CMakeFiles/Settings.dir/build
+.PHONY : Settings/fast
+
+#=============================================================================
 # Target rules for targets named glassos
 
 # Build rule for target.
@@ -259,6 +272,7 @@ help:
 	@echo "... GlassEffect"
 	@echo "... Kernel"
 	@echo "... Renderer"
+	@echo "... Settings"
 	@echo "... StartMenu"
 	@echo "... Taskbar"
 	@echo "... Terminal"

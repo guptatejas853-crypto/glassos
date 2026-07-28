@@ -16,6 +16,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/mnt/c/Users/gupta/Downloads/glassos/glass_effect/CMakeLists.txt"
   "/mnt/c/Users/gupta/Downloads/glassos/kernel/CMakeLists.txt"
   "/mnt/c/Users/gupta/Downloads/glassos/renderer/CMakeLists.txt"
+  "/mnt/c/Users/gupta/Downloads/glassos/settings/CMakeLists.txt"
   "/mnt/c/Users/gupta/Downloads/glassos/src/CMakeLists.txt"
   "/mnt/c/Users/gupta/Downloads/glassos/start_menu/CMakeLists.txt"
   "/mnt/c/Users/gupta/Downloads/glassos/taskbar/CMakeLists.txt"
@@ -69,6 +70,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "taskbar/CMakeFiles/CMakeDirectoryInformation.cmake"
   "start_menu/CMakeFiles/CMakeDirectoryInformation.cmake"
   "terminal/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "settings/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -83,5 +85,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "taskbar/CMakeFiles/Taskbar.dir/DependInfo.cmake"
   "start_menu/CMakeFiles/StartMenu.dir/DependInfo.cmake"
   "terminal/CMakeFiles/Terminal.dir/DependInfo.cmake"
+  "settings/CMakeFiles/Settings.dir/DependInfo.cmake"
   "src/CMakeFiles/glassos.dir/DependInfo.cmake"
   )

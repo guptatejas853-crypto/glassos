@@ -3,13 +3,14 @@
 
 src/CMakeFiles/glassos.dir/__/main.cpp.o: /mnt/c/Users/gupta/Downloads/glassos/main.cpp \
   /mnt/c/Users/gupta/Downloads/glassos/desktop/desktop.h \
-  /mnt/c/Users/gupta/Downloads/glassos/desktop/start_menu.h \
+  /mnt/c/Users/gupta/Downloads/glassos/desktop/window_manager.h \
   /mnt/c/Users/gupta/Downloads/glassos/explorer/explorer.h \
   /mnt/c/Users/gupta/Downloads/glassos/glass_effect/glass_effect.h \
   /mnt/c/Users/gupta/Downloads/glassos/kernel/include/Kernel.h \
   /mnt/c/Users/gupta/Downloads/glassos/renderer/renderer.h \
+  /mnt/c/Users/gupta/Downloads/glassos/start_menu/start_menu.h \
   /mnt/c/Users/gupta/Downloads/glassos/taskbar/taskbar.h \
-  /mnt/c/Users/gupta/Downloads/glassos/window_manager/window_manager.h \
+  /mnt/c/Users/gupta/Downloads/glassos/terminal/terminal.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -61,12 +62,15 @@ src/CMakeFiles/glassos.dir/__/main.cpp.o: /mnt/c/Users/gupta/Downloads/glassos/m
   /usr/include/c++/15/bits/requires_hosted.h \
   /usr/include/c++/15/bits/std_abs.h \
   /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
   /usr/include/c++/15/bits/stl_function.h \
   /usr/include/c++/15/bits/stl_iterator.h \
   /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
   /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/streambuf.tcc \
   /usr/include/c++/15/bits/streambuf_iterator.h \
   /usr/include/c++/15/bits/string_view.tcc \
@@ -74,6 +78,7 @@ src/CMakeFiles/glassos.dir/__/main.cpp.o: /mnt/c/Users/gupta/Downloads/glassos/m
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
@@ -108,6 +113,7 @@ src/CMakeFiles/glassos.dir/__/main.cpp.o: /mnt/c/Users/gupta/Downloads/glassos/m
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -216,7 +222,9 @@ src/glassos: desktop/libDesktop.a \
   glass_effect/libGlassEffect.a \
   kernel/libKernel.a \
   renderer/libRenderer.a \
+  start_menu/libStartMenu.a \
   taskbar/libTaskbar.a \
+  terminal/libTerminal.a \
   window_manager/libWindowManager.a \
   /lib64/ld-linux-x86-64.so.2 \
   /usr/lib/x86_64-linux-gnu/Scrt1.o \
@@ -255,6 +263,8 @@ src/glassos: desktop/libDesktop.a \
 
 /usr/lib/x86_64-linux-gnu/Scrt1.o:
 
+terminal/libTerminal.a:
+
 taskbar/libTaskbar.a:
 
 renderer/libRenderer.a:
@@ -264,8 +274,6 @@ glass_effect/libGlassEffect.a:
 desktop/libDesktop.a:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/error_constants.h:
 
@@ -278,8 +286,6 @@ desktop/libDesktop.a:
 /usr/include/x86_64-linux-gnu/c++/15/bits/c++locale.h:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/atomic_word.h:
 
@@ -296,8 +302,6 @@ desktop/libDesktop.a:
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -371,17 +375,17 @@ desktop/libDesktop.a:
 
 /usr/include/x86_64-linux-gnu/asm/types.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+/usr/include/time.h:
 
-/usr/include/x86_64-linux-gnu/asm/errno.h:
+/usr/include/stdlib.h:
 
-/usr/lib/x86_64-linux-gnu/libm.so.6:
+/usr/include/stdio.h:
 
-/usr/include/c++/15/debug/assertions.h:
+/usr/include/x86_64-linux-gnu/bits/errno.h:
 
-/usr/include/c++/15/bits/std_abs.h:
+/usr/include/wctype.h:
 
-/usr/include/c++/15/typeinfo:
+/usr/include/c++/15/bits/ostream_insert.h:
 
 /usr/include/c++/15/bits/ostream.tcc:
 
@@ -397,11 +401,17 @@ desktop/libDesktop.a:
 
 /usr/include/c++/15/bits/stringfwd.h:
 
-/usr/include/c++/15/cwctype:
+/usr/include/c++/15/bits/localefwd.h:
+
+/usr/include/c++/15/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
 
 /usr/include/c++/15/bits/postypes.h:
+
+/usr/include/wchar.h:
+
+/usr/include/c++/15/bits/ios_base.h:
 
 /usr/include/c++/15/bits/alloc_traits.h:
 
@@ -419,7 +429,9 @@ desktop/libDesktop.a:
 
 /usr/include/c++/15/bits/nested_exception.h:
 
-/usr/include/c++/15/bits/functexcept.h:
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/c++/15/bits/vector.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -435,19 +447,29 @@ desktop/libDesktop.a:
 
 /usr/include/c++/15/bits/cxxabi_init_exception.h:
 
+/usr/include/c++/15/bits/cxxabi_forced.h:
+
+start_menu/libStartMenu.a:
+
+/usr/include/c++/15/tuple:
+
+/usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h:
+
+/mnt/c/Users/gupta/Downloads/glassos/desktop/window_manager.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/mnt/c/Users/gupta/Downloads/glassos/start_menu/start_menu.h:
+
 window_manager/libWindowManager.a:
 
 /usr/include/c++/15/iostream:
 
 /mnt/c/Users/gupta/Downloads/glassos/explorer/explorer.h:
 
-/usr/include/c++/15/bits/localefwd.h:
-
 /usr/include/alloca.h:
 
 /mnt/c/Users/gupta/Downloads/glassos/kernel/include/Kernel.h:
-
-/usr/include/c++/15/bits/stl_iterator.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -456,6 +478,10 @@ window_manager/libWindowManager.a:
 /mnt/c/Users/gupta/Downloads/glassos/renderer/renderer.h:
 
 /usr/include/features-time64.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/c++/15/bits/basic_ios.tcc:
 
 /usr/include/c++/15/bits/allocator.h:
 
@@ -469,11 +495,15 @@ window_manager/libWindowManager.a:
 
 /usr/include/c++/15/bits/string_view.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/include/asm-generic/bitsperlong.h:
 
-/usr/include/c++/15/bits/ostream_insert.h:
+/usr/lib/x86_64-linux-gnu/libm.so.6:
 
-/usr/include/wctype.h:
+/usr/include/c++/15/debug/assertions.h:
+
+/usr/include/c++/15/bits/std_abs.h:
+
+/usr/include/c++/15/typeinfo:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
@@ -488,10 +518,6 @@ window_manager/libWindowManager.a:
 /usr/include/c++/15/initializer_list:
 
 /usr/include/c++/15/backward/binders.h:
-
-/usr/include/asm-generic/bitsperlong.h:
-
-/mnt/c/Users/gupta/Downloads/glassos/window_manager/window_manager.h:
 
 /usr/include/c++/15/bits/uses_allocator_args.h:
 
@@ -519,19 +545,11 @@ window_manager/libWindowManager.a:
 
 /usr/include/pthread.h:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/c++/15/bits/basic_ios.tcc:
-
 /usr/include/c++/15/bits/range_access.h:
 
 /usr/include/c++/15/bits/locale_facets.tcc:
 
 /usr/include/ctype.h:
-
-/usr/include/c++/15/bits/cxxabi_forced.h:
-
-/usr/include/c++/15/tuple:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -578,6 +596,18 @@ kernel/libKernel.a:
 /usr/include/c++/15/ostream:
 
 /usr/include/c++/15/bits/stl_construct.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/c++/15/bits/stl_uninitialized.h:
+
+/usr/include/c++/15/cwctype:
+
+/mnt/c/Users/gupta/Downloads/glassos/terminal/terminal.h:
+
+/usr/include/c++/15/bits/stl_vector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -651,8 +681,6 @@ explorer/libExplorer.a:
 
 /usr/include/linux/errno.h:
 
-/mnt/c/Users/gupta/Downloads/glassos/desktop/start_menu.h:
-
 /usr/include/c++/15/pstl/pstl_config.h:
 
 /usr/include/c++/15/stdexcept:
@@ -667,11 +695,11 @@ explorer/libExplorer.a:
 
 /usr/include/c++/15/system_error:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+/usr/include/c++/15/bits/stl_iterator.h:
 
-/usr/include/locale.h:
+/usr/include/c++/15/bits/stl_bvector.h:
 
-/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+/usr/include/c++/15/vector:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/gthr-default.h:
 
@@ -689,16 +717,12 @@ src/CMakeFiles/glassos.dir/__/main.cpp.o:
 
 /usr/include/linux/types.h:
 
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
+
+/usr/include/locale.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
 
 /usr/include/sched.h:
-
-/usr/include/stdio.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/time.h:
-
-/usr/include/c++/15/bits/ios_base.h:
-
-/usr/include/wchar.h:

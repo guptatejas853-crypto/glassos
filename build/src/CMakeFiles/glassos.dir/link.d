@@ -10,6 +10,9 @@ glassos: \
   ../explorer/libExplorer.a \
   ../glass_effect/libGlassEffect.a \
   ../taskbar/libTaskbar.a \
+  ../start_menu/libStartMenu.a \
+  ../terminal/libTerminal.a \
+  ../settings/libSettings.a \
   ../renderer/libRenderer.a \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -62,6 +65,12 @@ CMakeFiles/glassos.dir/__/main.cpp.o:
 ../glass_effect/libGlassEffect.a:
 
 ../taskbar/libTaskbar.a:
+
+../start_menu/libStartMenu.a:
+
+../terminal/libTerminal.a:
+
+../settings/libSettings.a:
 
 ../renderer/libRenderer.a:
 

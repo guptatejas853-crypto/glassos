@@ -1,5 +1,8 @@
-src/CMakeFiles/glassos.dir/__/main.cpp.o: \
- /mnt/c/Users/gupta/Downloads/glassos/main.cpp /usr/include/stdc-predef.h \
+settings/CMakeFiles/Settings.dir/settings.cpp.o: \
+ /mnt/c/Users/gupta/Downloads/glassos/settings/settings.cpp \
+ /usr/include/stdc-predef.h \
+ /mnt/c/Users/gupta/Downloads/glassos/settings/settings.h \
+ /mnt/c/Users/gupta/Downloads/glassos/settings/../renderer/renderer.h \
  /usr/include/c++/15/iostream /usr/include/c++/15/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
@@ -159,18 +162,4 @@ src/CMakeFiles/glassos.dir/__/main.cpp.o: \
  /usr/include/c++/15/bits/locale_facets.tcc \
  /usr/include/c++/15/bits/basic_ios.tcc \
  /usr/include/c++/15/bits/ostream.tcc /usr/include/c++/15/istream \
- /usr/include/c++/15/bits/istream.tcc \
- /mnt/c/Users/gupta/Downloads/glassos/kernel/include/Kernel.h \
- /mnt/c/Users/gupta/Downloads/glassos/desktop/desktop.h \
- /mnt/c/Users/gupta/Downloads/glassos/desktop/window_manager.h \
- /usr/include/c++/15/vector /usr/include/c++/15/bits/stl_uninitialized.h \
- /usr/include/c++/15/bits/stl_vector.h \
- /usr/include/c++/15/bits/stl_bvector.h \
- /usr/include/c++/15/bits/vector.tcc \
- /mnt/c/Users/gupta/Downloads/glassos/renderer/renderer.h \
- /mnt/c/Users/gupta/Downloads/glassos/explorer/explorer.h \
- /mnt/c/Users/gupta/Downloads/glassos/glass_effect/glass_effect.h \
- /mnt/c/Users/gupta/Downloads/glassos/taskbar/taskbar.h \
- /mnt/c/Users/gupta/Downloads/glassos/start_menu/start_menu.h \
- /mnt/c/Users/gupta/Downloads/glassos/terminal/terminal.h \
- /mnt/c/Users/gupta/Downloads/glassos/settings/settings.h
+ /usr/include/c++/15/bits/istream.tcc

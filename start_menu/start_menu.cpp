@@ -24,5 +24,9 @@ bool StartMenu::Open()
         250
     );
 
+    std::cout << "  • Explorer\n";
+    std::cout << "  • Terminal\n";
+    std::cout << "  • Settings\n";
+
     return true;
 }
